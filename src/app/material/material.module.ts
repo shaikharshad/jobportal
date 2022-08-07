@@ -82,7 +82,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatRippleModule,
+    MatSlideToggleModule,
+    MatGridListModule
+    
   ],
   exports: [
     MatAutocompleteModule,
@@ -120,7 +129,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatGridListModule,
+   
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatRippleModule,
+    MatSlideToggleModule,
   ]
 })
 export class MaterialModule { }

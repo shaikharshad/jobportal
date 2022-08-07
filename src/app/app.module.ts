@@ -8,19 +8,25 @@ import { MaterialModule } from './material/material.module';
 import { MenuComponent } from './collection/menu/menu.component';
 import { HeaderComponent } from './collection/header/header.component';
 import { MainWallComponent } from './collection/main-wall/main-wall.component';
+import { AdminloginComponent } from './collection/adminlogin/adminlogin.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule  } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     HeaderComponent,
-    MainWallComponent
+    MainWallComponent,
+    AdminloginComponent,    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
