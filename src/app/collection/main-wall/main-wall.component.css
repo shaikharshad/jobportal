@@ -6,7 +6,7 @@ mat-grid-tile {
   .mat-card-sm-image {
     width: 80px;
     height: 80px;
-    border-radius: 23px;
+    border-radius: 39px;
 }
 
  
@@ -15,11 +15,83 @@ mat-grid-tile {
     color: #101010;
 }
 
+.mat-card-actions{
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.mat-card>.mat-card-actions:last-child {
+     margin-bottom: -8px;
+    padding-bottom: 0;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+}
 
+.mat-card-title{
+  font-size : 17px;
+}
+
+@media (max-width: 480px) {
+  .mat-card-title {
+    font-size: 12px;
+  }
+
+.mat-card-sm-image
+  {
+    width: 57px;
+    height: 53px;
+    border-radius: 30px;
+  }
+.mat-card-subtitle{
+  margin-top: -6px;
+  font-size: 12px;
+}
+  .mat-card-content{
+    margin-bottom: 16px;
+    color: #7c7777;
+    margin-top: -11px;
+    line-height: 15px;
+  }
+  .mat-card-actions{
+    padding: 0px;
+    margin-top: -24px;
+  }
+  .mat-stroked-button-wall{
+    box-sizing: border-box;
+    font-size: 9.4px;
+  }
+  .mat-stroked-button-wall-text{
+    font-size: 9.4px;
+  }
+}
+  /* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+    
+  }
+}
 .mat-card-actions, .mat-card-subtitle, .mat-card-content {
     display: block;
     margin-bottom: 16px;
     color: #7c7777;
+    
 }
 
 .container, .container-lg, .container-md, .container-sm, .container-xl{
@@ -76,10 +148,10 @@ section {
 
 .wal-colmn
 {
-  padding :17px;
-  overflow: scroll;
+  padding :33px;
+  /* overflow: scroll;
   overflow-x: visible;
-  height: 500px;
+  height: 500px; */
 
 }
 .wal-colmn-side
@@ -92,4 +164,13 @@ section {
 }
 .mat-expansion-panel-header {
   background-color: blue;
+}
+.mat-drawer-content{
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: 100%;
+  overflow: auto;
+
+
 }

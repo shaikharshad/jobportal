@@ -2,26 +2,38 @@
 <div class="container-flude">
   <div class="row">
     <div class="col-sm-8 wal-colmn"   >
-      <ng-container *ngFor="let item of wallData ; let i = index" >
+      <ng-container *ngFor="let item of wallData  ; let i = index" >
         <mat-card class="example-card primary"  >
             <mat-card-title-group>
-              <mat-card-title> {{i}} {{  item?.title}}</mat-card-title>
+              <mat-card-title >  {{ item?.title }}
+                {{item?.title.length < 20 ? '' : '...'}}
+
+              </mat-card-title>
               <mat-card-subtitle>The Shiba Inu is the smallest of the</mat-card-subtitle>
               <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
             </mat-card-title-group>
-            <mat-card-content>
+            <mat-card-content >
               {{item?.body}}
             </mat-card-content>
-            <mat-card-actions> 
-              <button mat-stroked-button color="warn"> Last Date :</button>
-              <button mat-stroked-button color="primary"> Fees : </button>
-              <button mat-stroked-button color="primary">Download Pdf</button>
-              <button mat-stroked-button color="primary">Read More...</button>
+            
+            <mat-card-actions class="mat-card-actions"> 
+              <p><small class="mat-stroked-button-wall-text">Last Date : 12/01/2022 .</small></p>
+              <!-- <p><small>Fees: 500 /- .</small></p> -->
+              <!-- <button mat-stroked-button color="warn"> Last Date :</button>
+              <button mat-stroked-button color="primary"> Fees : </button> -->
+              <button mat-stroked-button  class="mat-stroked-button-wall" color="primary">Download Pdf</button>
+              <button mat-stroked-button class="mat-stroked-button-wall" color="primary">Read More...</button>
             </mat-card-actions>
            
           </mat-card>
           <br>
         </ng-container>
+        <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+        </mat-paginator>
+
     </div>
    
     <div class="col-sm-4  wal-colmn-side">

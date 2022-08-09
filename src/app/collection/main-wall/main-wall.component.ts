@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonServiceService } from 'src/app/common-services/common-service.service';
 import { HttpClient } from '@angular/common/http';
+import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-main-wall',
@@ -23,6 +24,7 @@ export class MainWallComponent implements OnInit {
 
   wallData:any
   getMainWallData(){
+    
     this._commonServices.GetMainWall().subscribe((data:any) => {
 
       this.wallData = data
@@ -31,6 +33,9 @@ export class MainWallComponent implements OnInit {
 
     })
   }
+  counter(i: number) {
+    return new Array(i);
+}
   ngOnInit() {
     this.breakpoint = window.innerWidth <= 400 ? 1 : 4;
 
