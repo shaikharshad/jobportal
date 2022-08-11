@@ -13,6 +13,8 @@ mat-grid-tile {
   .mat-card {
     background: #ffffff;
     color: #101010;
+    padding: 8px;
+
 }
 
 .mat-card-actions{
@@ -22,8 +24,8 @@ mat-grid-tile {
   justify-content: flex-end;
 }
 .mat-card>.mat-card-actions:last-child {
-     margin-bottom: -8px;
-    padding-bottom: 0;
+    margin-bottom: -8px;
+    margin-top: -13px;
     display: flex;
     align-items: baseline;
     flex-wrap: nowrap;
@@ -64,6 +66,28 @@ mat-grid-tile {
   }
   .mat-stroked-button-wall-text{
     font-size: 9.4px;
+  }
+
+.searcInput{
+    line-height:107%;
+    width: 98px;
+    height: 28px;
+  }
+  
+  .example-button-container{
+    position: absolute;
+    right: -41px;
+    top: 5px;
+    display: block;
+  }
+  .example-button-container button , mat-icon{
+    
+    width: 23px;
+    height: 23px;
+  }
+  .example-button-container  mat-icon{
+    
+    margin-top: -19px;
   }
 }
   /* For desktop: */
@@ -157,7 +181,8 @@ section {
 .wal-colmn-side
 {
   margin-top: 16px;
-  
+
+  padding: 31px;
 }
 .mat-form-field + .mat-form-field {
   margin-left: 8px;
@@ -174,3 +199,57 @@ section {
 
 
 }
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  color: rgb(27, 19, 19);
+}
+.mat-form-field {
+  margin-right: 12px;
+}
+
+.wal-colmn  .searchLable {
+
+  color:#101010;
+}
+
+.wal-colmn-search-card{
+
+  padding: 2px;
+
+}
+
+
+/* for ribbon */
+/* 
+.ribbon {
+  margin: 0;
+  padding: 0;
+  background: rebeccapurple;
+  color:white;
+  padding:1em 0;
+  position: absolute;
+  top:0;
+  right:0;
+  transform: translateX(30%) translateY(0%) rotate(45deg);
+  transform-origin: top left;
+}
+.ribbon:before,
+.ribbon:after {
+  content: '';
+  position: absolute;
+  top:0;
+  margin: 0 -1px;
+  width: 100%;
+  height: 100%;
+  background: rebeccapurple;
+}
+.ribbon:before {
+  right:100%;
+}
+
+.ribbon:after {
+  left:100%;
+}
+.parent {
+  overflow: hidden; 
+  margin: 25px auto; 
+} */

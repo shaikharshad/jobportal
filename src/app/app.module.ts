@@ -11,6 +11,8 @@ import { MainWallComponent } from './collection/main-wall/main-wall.component';
 import { AdminloginComponent } from './collection/adminlogin/adminlogin.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule  } from '@angular/common/http';
+import { PostDetailsComponent } from './collection/post-details/post-details.component';
+import { SideWallComponent } from './collection/side-wall/side-wall.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HttpClientModule  } from '@angular/common/http';
     MenuComponent,
     HeaderComponent,
     MainWallComponent,
-    AdminloginComponent,    
+    AdminloginComponent,
+    PostDetailsComponent,
+    SideWallComponent,    
   ],
   imports: [
     BrowserModule,
