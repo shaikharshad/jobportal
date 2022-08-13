@@ -66,7 +66,7 @@
       margin-right: 40%;
       
       min-height: 10%;
-      min-widht: 30%
+      /* min-width: 30% */
   }
    fieldset.scheduler-border {
        height: 99%;

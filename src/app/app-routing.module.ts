@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminloginComponent } from './collection/adminlogin/adminlogin.component';
+import { FooterComponent } from './collection/footer/footer.component';
 import { HeaderComponent } from './collection/header/header.component';
 import { MainWallComponent } from './collection/main-wall/main-wall.component';
 import { MenuComponent } from './collection/menu/menu.component';
@@ -12,7 +13,8 @@ const routes: Routes = [
 { path : 'header' ,component: HeaderComponent },
 { path : 'main-wall' ,component: MainWallComponent },
 { path : 'login' ,component: AdminloginComponent },
-{ path : 'post-details' , component:PostDetailsComponent}
+{ path : 'post-details' , component:PostDetailsComponent},
+{ path : 'footer' , component:FooterComponent}
 
 ];
 

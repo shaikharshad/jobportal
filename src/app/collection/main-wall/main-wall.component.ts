@@ -30,6 +30,11 @@ export class MainWallComponent implements OnInit {
       "isActive":true,
       "post_type":'THDCIL',
       "post_no_of_post":200,
+      "post_age_req":'',
+      "post_location":'',
+      "post_fees":'',
+      "post_exam_date":'',
+      "post_official_website":'',
       "post_pdf_document":'' ,
       "post_category": [
         {
@@ -41,77 +46,77 @@ export class MainWallComponent implements OnInit {
         },
         {
           "post_id":1,
-          "sub_post_category_id":1,
+          "sub_post_category_id":2,
           "sub_post_name":'CAPF मधील उपनिरीक्षक (GD)',
           "sub_post_total_no":20,
           "sub_post_education_req":""
         },
         {
           "post_id":1,
-          "sub_post_category_id":1,
+          "sub_post_category_id":3,
           "sub_post_name":'CAPF मधील उपनिरीक्षक (GD)',
           "sub_post_total_no":20,
           "sub_post_education_req":""
         },
         {
           "post_id":1,
-          "sub_post_category_id":1,
+          "sub_post_category_id":4,
           "sub_post_name":'CAPF मधील उपनिरीक्षक (GD)',
           "sub_post_total_no":20,
           "sub_post_education_req":""
         },
         {
           "post_id":1,
-          "sub_post_category_id":1,
+          "sub_post_category_id":5,
+          "sub_post_name":'CAPF मधील उपनिरीक्षक (GD)',
+          "sub_post_total_no":55,
+          "sub_post_education_req":""
+        },
+        {
+          "post_id":1,
+          "sub_post_category_id":6,
           "sub_post_name":'CAPF मधील उपनिरीक्षक (GD)',
           "sub_post_total_no":20,
           "sub_post_education_req":""
         },
         {
           "post_id":1,
-          "sub_post_category_id":1,
+          "sub_post_category_id":7,
           "sub_post_name":'CAPF मधील उपनिरीक्षक (GD)',
           "sub_post_total_no":20,
           "sub_post_education_req":""
         },
         {
           "post_id":1,
-          "sub_post_category_id":1,
+          "sub_post_category_id":8,
           "sub_post_name":'CAPF मधील उपनिरीक्षक (GD)',
           "sub_post_total_no":20,
           "sub_post_education_req":""
         },
         {
           "post_id":1,
-          "sub_post_category_id":1,
+          "sub_post_category_id":9,
           "sub_post_name":'CAPF मधील उपनिरीक्षक (GD)',
           "sub_post_total_no":20,
           "sub_post_education_req":""
         },
         {
           "post_id":1,
-          "sub_post_category_id":1,
+          "sub_post_category_id":10,
           "sub_post_name":'CAPF मधील उपनिरीक्षक (GD)',
           "sub_post_total_no":20,
           "sub_post_education_req":""
         },
         {
           "post_id":1,
-          "sub_post_category_id":1,
+          "sub_post_category_id":11,
           "sub_post_name":'CAPF मधील उपनिरीक्षक (GD)',
           "sub_post_total_no":20,
           "sub_post_education_req":""
         },
         {
           "post_id":1,
-          "sub_post_category_id":1,
-          "sub_post_name":'CAPF मधील उपनिरीक्षक (GD)',
-          "sub_post_total_no":20,
-          "sub_post_education_req":""
-        },
-        {
-          "post_id":1,
-          "sub_post_category_id":1,
+          "sub_post_category_id":12,
           "sub_post_name":'CAPF मधील उपनिरीक्षक (GD)',
           "sub_post_total_no":20,
           "sub_post_education_req":""

@@ -1,4 +1,56 @@
 mat-grid-tile {
     background: lightblue;
   }
+  @media (max-width: 480px) {
+    /* .headerBackground{
+      background-image: url('../../../assets/wallpaper.png');
+      height: 123px;
+      background-repeat: no-repeat;
+      width: 10px;
+    } */
+    .header_image{
+      height: 50px;
+      border-radius: 19px;    }
+      
+      .cardDesign .btn-group .text {
+        font-size: 8px !important ;
+        display: flex;
+      }
+  }  
+
+  .headerBackground{
+      background-repeat: no-repeat;
+     width: 100%;
+  }
+
+.headerRow {
+    height: 123px;
+
+  }
+
+  .cardDesign{
+    height: 28px;
+    padding: 0px;
+
+  }
+  .cardDesign .small{
+    font-size: 13px;
+  }
+  .cardDesign .btn-group {
+    height: 10px;
+  }
   
+  .cardDesign .btn-group button {
+    height: 26px;
+    margin-top: -6px;
+  }
+
+  .cardDesign .btn-group .text {
+    font-size: 12px;
+    display: flex;
+  }
+   .english-marathi {
+
+    float: right; 
+    top: 6px;
+  }

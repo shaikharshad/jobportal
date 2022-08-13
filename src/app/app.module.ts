@@ -13,6 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule  } from '@angular/common/http';
 import { PostDetailsComponent } from './collection/post-details/post-details.component';
 import { SideWallComponent } from './collection/side-wall/side-wall.component';
+import { FooterComponent } from './collection/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SideWallComponent } from './collection/side-wall/side-wall.component';
     MainWallComponent,
     AdminloginComponent,
     PostDetailsComponent,
-    SideWallComponent,    
+    SideWallComponent,
+    FooterComponent,    
   ],
   imports: [
     BrowserModule,
