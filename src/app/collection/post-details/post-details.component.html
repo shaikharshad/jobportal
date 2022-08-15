@@ -30,20 +30,20 @@
           <br>
             <mat-card class="example-card primary">
                 <mat-card-title-group>
-                    <mat-card-title> sunt aut facere repellat provident occaecati excepturi optio reprehenderit ...
+                    <mat-card-title> {{postDetials?.id}} {{postDetials?.post_name}}
                     </mat-card-title>
                     <mat-card-subtitle>The Shiba Inu is the smallest of the</mat-card-subtitle>
-                    <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+                    <img mat-card-sm-image src="{{postDetials?.post_image}}">
                 </mat-card-title-group>
                 <mat-card-content>
-                    content
+                  {{postDetials?.post_details}}
 
                     <br><br>
                     <mat-card>
                         <mat-card-title-group>
                             <mat-card-title class="post-detials-list"> 
                                 <mat-list>
-                                    <h3>Discription No 1</h3> 
+                                    <h3> Read carefully befor apply of this &nbsp; {{postDetials?.post_type}}</h3> 
                                     
                                     <mat-divider></mat-divider>
                                 </mat-list>
@@ -52,61 +52,80 @@
                                 
                         </mat-card-title-group>
                         <mat-card-content>
-                        
+                          <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
                                   <tr  class="post-detial-row">
-                                    <th scope="col" >Lorem Ipsum</th>
-                                    <td>Lorem Ipsum</td>
+                                    <th scope="col" >Advertisement No.</th>
+                                    <td  colspan="5">:{{postDetials?.post_advertisment_no}}</td>
                                   </tr>
                                 </thead>
                                 <tbody>
                                   <tr>
-                                    <th scope="row" >Lorem Ipsum</th>
-                                    <td>Lorem Ipsum</td>
+                                    <th scope="row" >Total</th>
+                                    <td  colspan="5">{{postDetials?.post_no_of_post}}</td>
                                   </tr>
                                 </tbody>
 
                                 <thead>
                                     <tr>
-                                      <th scope="col" class="post-detial-row">Lorem Ipsum</th>
-                                      <td>Lorem Ipsum</td>
+                                      <th scope="col" class="post-detial-row">Name of the Post</th>
+                                      <td  colspan="5">{{postDetials?.post_type}}</td>
                                     </tr>
                                   </thead>
                                   <tbody>
                                     <tr>
-                                      <th scope="row">Lorem Ipsum</th>
-                                      <td>Lorem Ipsum</td>
+                                      <th scope="row">Age Limit</th>
+                                      <td colspan="5">{{postDetials?.post_age_req || 'N/A'}}</td>
                                     </tr>
                                   </tbody>
                                   <thead>
                                     <tr>
-                                      <th scope="col" class="post-detial-row">Lorem Ipsum</th>
-                                      <td>Lorem Ipsum</td>
-                                    </tr>
+                                      <th scope="col" class="post-detial-row">Job Location</th>
+                                      <td colspan="5">{{postDetials?.post_location || 'N/A'}}</td>                                    </tr>
                                   </thead>
                                   <tbody>
                                     <tr>
-                                      <th scope="row">Lorem Ipsum</th>
-                                      <td>Lorem Ipsum</td>
+                                      <th scope="row">Fee</th>
+                                      <td>{{postDetials?.post_fees || 'N/A'}} /-&#8377;</td> 
+                                      <th scope="row">
+                                        <span class="small">
+                                          OBC/OPEN
+                                        </span>
+                                       </th>
+                                       <td>{{postDetials?.post_obc_fees || 'N/A'}} /-&#8377;</td> 
+                                       <th scope="row">
+                                        <span class="small">
+                                          SC/ST/NT
+                                        </span>
+                                       </th>
+                                       <td>{{postDetials?.post_other_fees || 'N/A'}} /-&#8377;</td> 
+
                                     </tr>
                                   </tbody>
-  
+
                                   <thead>
                                       <tr>
-                                        <th scope="col" class="post-detial-row">Lorem Ipsum</th>
-                                        <td>Lorem Ipsum</td>
+                                        <th scope="col" class="post-detial-row text-danger">Last Date of Online Application</th>
+                                        <td  colspan="2" class="text-danger"> {{postDetials?.post_closed_date || 'N/A'}}</td> 
+                                        <th scope="col" class="post-detial-row text-success">Date Extended</th>
+                                        <td  colspan="2" > <span class="text-success"> {{postDetials?.post_closed_date_extended || 'N/A'}} </span> </td> 
                                       </tr>
+                                      
+
                                     </thead>
                                     <tbody>
                                       <tr>
-                                        <th scope="row">Lorem Ipsum</th>
-                                        <td>Lorem Ipsum</td>
-                                      </tr>
-                                    </tbody>
-  
+                                        <th scope="row">Official Website</th>
+                                        <td  colspan="5">
+                                          <a href="#" class="link-primary">{{postDetials?.post_official_website || 'N/A'}}</a>
 
-                              </table>
+                                          </td>                                       </tr>
+                                    </tbody>
+
+
+                            </table>
+                          </div>    
 
                         </mat-card-content>
                     </mat-card>
@@ -115,7 +134,7 @@
                         <mat-card-title-group>
                             <mat-card-title class="post-detials-list"> 
                                 <mat-list>
-                                    <h3>Discription No 2</h3> 
+                                    <h3>Post catogray and requirment.</h3> 
                                     
                                     <mat-divider></mat-divider>
                                 </mat-list>
@@ -124,61 +143,40 @@
                                 
                         </mat-card-title-group>
                         <mat-card-content>
-                        
+                          <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                      <th scope="col" colspan="3" class="post-detial-row" style="text-align:center ">Lorem Ipsum</th>
+                                      <th scope="col" colspan="4" class="post-detial-row" style="text-align:center ">Post category </th>
                                     </tr>
                                   </thead>
-                                <thead>
-                                  <tr>
-                                    <th scope="col" class="post-detial-row">Lorem Ipsum</th>
-                                    <th scope="col" class="post-detial-row">Lorem Ipsum</th>
-                                    <th scope="col" class="post-detial-row">Lorem Ipsum</th>
+                                <thead class="post_detail_table_row_color" >
+                                  <tr >
+                                    <th scope="col" class="post-detial-row">Sr.No</th>
+                                    <th scope="col" class="post-detial-row" >Name of the posrt</th>
+                                    <th scope="col" class="post-detial-row">Total No</th>
+                                    <th scope="col" class="post-detial-row">Education</th>
+
                                   </tr>
                                 </thead>
-                                <tbody>
-                                  <tr>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-
-                                  </tr>
-                                  <tr>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-
-                                  </tr>
-                                  <tr>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-
-                                  </tr>
-                                  <tr>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-
-                                  </tr>
-                                  <tr>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
+                                <tbody class="post_detail_table_cell_color">
+                                  <tr *ngFor="let item_sub of postDetials?.post_category ; let i= index">
+                                    <td >{{i+1 || 'N/A'}}</td>                                     
+                                    <td>{{item_sub?.sub_post_name || 'N/A'}}</td>                                       
+                                    <td>{{item_sub?.sub_post_total_no || 'N/A'}}</td>                                       
+                                    <td>{{item_sub?.sub_post_education_req || 'N/A'}}</td>                                      
 
                                   </tr>
                                 </tbody>
 
                                 
 
-                              </table>
-
+                            </table>
+                          </div>     
                         </mat-card-content>
                     </mat-card>
                     <br>
-                    <mat-card>
+                    <!-- <mat-card>
                       <mat-card-title-group>
                           <mat-card-title class="post-detials-list"> 
                               <mat-list>
@@ -248,7 +246,7 @@
                             </table>
 
                       </mat-card-content>
-                  </mat-card>
+                  </mat-card> -->
                   <br>
                   <mat-card>
                     <mat-card-content class="post_details_appaly">

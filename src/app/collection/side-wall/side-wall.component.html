@@ -1,50 +1,51 @@
 
 <ul class="list-group">
-    <li class="list-group-item active">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Morbi leo risus</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item active">New Updates</li>
+    <li class="list-group-item list-item-margins" *ngFor="let itemData of wallData">
+       <mat-icon >keyboard_arrow_right</mat-icon>
+       <span class="link-secondary side-wall-new-update ">
+         {{ itemData?.post_name  | slice:0:35 }}...  
+       </span>  
+      <span class="badge rounded-pill bg-danger">New</span>
+    </li>
+   
   </ul>
-  
   <br>
-  <ul class="list-group">
-    <li class="list-group-item active">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Morbi leo risus</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
-  
-  <br>
-
-  <mat-accordion>
-    <mat-expansion-panel hideToggle>
+    <mat-accordion>
+      <ul class="list-group">
+        <li class="list-group-item active">Result Or Answer Key</li>
+    <mat-expansion-panel  *ngFor="let itemData of wallResultAnswerKey">
       <mat-expansion-panel-header>
         <mat-panel-title>
-          This is the expansion title
+          <span class="link-secondary side-wall-new-update ">
+            {{ itemData?.post_name  | slice:0:35 }}...  
+          </span>  
         </mat-panel-title>
       
       </mat-expansion-panel-header>
+      <ng-container  *ngIf="itemData?.isResult">
+        <p>Click Here to check result     <button mat-raised-button class="button_click" color="primary"><span > Result</span></button></p> 
+      </ng-container>
+
+     <!-- {{ itemData?.resultLink  || 'NA '}} -->
+      <!--  <p>This is the primary content of the panel.</p>
       <p>This is the primary content of the panel.</p>
-      <p>This is the primary content of the panel.</p>
-      <p>This is the primary content of the panel.</p>
-      <p>This is the primary content of the panel.</p>
+      <p>This is the primary content of the panel.</p> -->
 
     </mat-expansion-panel>
-    <mat-expansion-panel (opened)="panelOpenState = true"
-                         (closed)="panelOpenState = false">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Self aware panel
-        </mat-panel-title>
-  
-      </mat-expansion-panel-header>
-      <p>I'm visible because I am open</p>
-      <p>I'm visible because I am open</p>
-      <p>I'm visible because I am open</p>
-      <p>I'm visible because I am open</p>
-      <p>I'm visible because I am open</p>
-      <p>I'm visible because I am open</p>
-    </mat-expansion-panel>
+    </ul>
   </mat-accordion>
+  <br>  
+  <ul class="list-group">
+    <li class="list-group-item active">Result</li>
+    <li class="list-group-item list-item-margins" *ngFor="let itemData of wallData">
+       <span class="link-secondary side-wall-new-update ">
+         {{ itemData?.post_name  | slice:0:35 }}...  
+       </span>  
+      <span class="badge rounded-pill bg-danger">New</span>
+    </li>
+   
+  </ul>
+  
+  <br>
+

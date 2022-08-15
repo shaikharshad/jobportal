@@ -63,7 +63,7 @@ mat-grid-tile {
   }
   
   .mat-card-title{
-    font-size : 17px;
+    font-size : 14px;
   }
   
   
@@ -104,6 +104,7 @@ mat-grid-tile {
       color: #7c7777;
       margin-top: -11px;
       line-height: 15px;
+      font-size: 12px;
     }
     .mat-card-actions{
       padding: 0px;
@@ -298,4 +299,15 @@ mat-grid-tile {
   .post_details_appaly{
         display: flex;
     justify-content: center;
+  }
+
+  .post_detail_table_row_color{
+
+    background-color: #6AC47E;
+    border-top-right-radius: 25px;
+
+  }
+  .post_detail_table_cell_color{
+    /* background-color: #35BDD0; */
+    
   }

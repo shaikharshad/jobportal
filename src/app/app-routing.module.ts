@@ -13,8 +13,14 @@ const routes: Routes = [
 { path : 'header' ,component: HeaderComponent },
 { path : 'main-wall' ,component: MainWallComponent },
 { path : 'login' ,component: AdminloginComponent },
-{ path : 'post-details' , component:PostDetailsComponent},
-{ path : 'footer' , component:FooterComponent}
+{ path : 'post-details' , component:PostDetailsComponent,},
+{ path : 'post-details/:id' , component:PostDetailsComponent,},
+
+{ path : 'footer' , component:FooterComponent},
+{ path: 'aboutus', loadChildren: () => import('./collection/staticpages/aboutus/aboutus.module').then(m => m.AboutusModule) },
+{ path: 'contactus', loadChildren: () => import('./collection/staticpages/contactus/contactus.module').then(m => m.ContactusModule) },
+{ path: 'privacypolicy', loadChildren: () => import('./collection/staticpages/privacypolicy/privacypolicy.module').then(m => m.PrivacypolicyModule) },
+{ path: 'termandcondition', loadChildren: () => import('./collection/staticpages/termandcondition/termandcondition.module').then(m => m.TermandconditionModule) }
 
 ];
 

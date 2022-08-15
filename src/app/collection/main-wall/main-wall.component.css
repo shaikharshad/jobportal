@@ -32,7 +32,7 @@ mat-grid-tile {
 }
 
 .mat-card-title{
-  font-size : 17px;
+  font-size : 14px;
 }
 
 @media (max-width: 480px) {
@@ -55,6 +55,7 @@ mat-grid-tile {
     color: #7c7777;
     margin-top: -11px;
     line-height: 15px;
+    font-size: 12px;
   }
   .mat-card-actions{
     padding: 0px;
@@ -88,6 +89,16 @@ mat-grid-tile {
   .example-button-container  mat-icon{
     
     margin-top: -19px;
+  }
+  .spiner-wall{
+    position: absolute !important;
+    z-index: 2!important;
+    left: 0!important;
+    right: -52px!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    width: 100px!important;
+    top: 160px
   }
 }
   /* For desktop: */
@@ -215,6 +226,15 @@ section {
 
   padding: 2px;
 
+}
+.spiner-wall{
+  position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 405px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
 }
 
 

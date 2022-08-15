@@ -2,6 +2,7 @@
 <div class="container-flude">
   <div class="row">
     <div class="col-sm-8 wal-colmn"   >
+      
       <mat-card class="wal-colmn-search-card">
         <div class="row">
           <div class="col-4">
@@ -27,28 +28,38 @@
          -->
       </mat-card>
       <br>
+      <div class="spiner-wall" *ngIf="!panelOpenState">
+        <div class="spinner-border text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
       <ng-container *ngFor="let item of wallData  ; let i = index" >
         <mat-card class="example-card primary parent"  >
           <!-- <h4 class="ribbon">Closed</h4> -->
+          
             <mat-card-title-group>
-              <mat-card-title >  {{ item?.title }}
-                {{item?.title.length < 20 ? '' : '...'}}
+              <mat-card-title [routerLink]="[ '/post-details',item?.id]" >  {{i+1}} {{ item?.post_name }}
+                {{item?.post_name.length < 20 ? '' : '...'}}
 
               </mat-card-title>
-              <mat-card-subtitle>The Shiba Inu is the smallest of the</mat-card-subtitle>
-              <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+              <mat-card-subtitle> <span class="strong">  <b> Location : </b></span>{{ item?.post_location }} <span class="strong">  <b> Job type : </b></span>{{ item?.post_short_details }}   </mat-card-subtitle>
+              <img mat-card-sm-image src="{{item?.post_image}}" >
             </mat-card-title-group>
             <mat-card-content >
-              {{item?.body}}
+             
+              {{ item?.post_details  | slice:0:200 }}...  
             </mat-card-content>
             
             <mat-card-actions class="mat-card-actions"> 
-              <p><small class="mat-stroked-button-wall-text">Last Date : 12/01/2022 .</small></p>
+              <p><small class="mat-stroked-button-wall-text text-danger">Last Date :{{item?.post_closed_date}}</small></p>
               <!-- <p><small>Fees: 500 /- .</small></p> -->
               <!-- <button mat-stroked-button color="warn"> Last Date :</button>
               <button mat-stroked-button color="primary"> Fees : </button> -->
               <button mat-stroked-button  class="mat-stroked-button-wall" color="primary">Download Pdf</button>
-              <button mat-stroked-button [routerLink]="['/post-details']" routerLinkActive="router-link-active"  class="mat-stroked-button-wall" color="primary">Read More...</button>
+              <button mat-stroked-button [routerLink]="[ '/post-details',item?.id]"  class="mat-stroked-button-wall" color="primary">Read More...</button>
+              <!-- <button mat-stroked-button [routerLink]="['/post-details']" [queryParams]="{ id: item?.id , skipLocationChange: true
+              } "  class="mat-stroked-button-wall" color="primary">Read More...</button> -->
+
             </mat-card-actions>
            
           </mat-card>
