@@ -5,14 +5,14 @@ import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { Router } from '@angular/router';
 import { DatapassServiceService } from 'src/app/datapass-service/datapass-service.service';
 import { ThisReceiver } from '@angular/compiler';
-
+import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-main-wall',
   templateUrl: './main-wall.component.html',
   styleUrls: ['./main-wall.component.css']
 })
 export class MainWallComponent implements OnInit {
-  
+  userInfo: any = {};  
   constructor( 
     private _commonServices:CommonServiceService ,
     private router:Router,
@@ -28,14 +28,49 @@ export class MainWallComponent implements OnInit {
 
 
   wallData:any
-
+  searchcard:boolean=false
   panelOpenState:boolean = false;
 
   getMainWallData(){
       this.wallData= this._commonServices.main_wall_data
   }
 
+  get(){
+    // console.log(newValue);
+    console.log(this.name.value,"sf");
+    console.log(this.name.value?.length ,"length");
+    const len = this.name.value?.length
+    let getvalue: string | null
+     getvalue= this.name.value
+  
+     if(len!= undefined){
 
+      if(len >  3 ){
+        var  filtredData= this._commonServices.main_wall_data.filter(data => data.post_location == getvalue)
+   
+        console.log(filtredData,"filtredData");
+        this.wallData = filtredData
+        if(this.wallData)
+        {
+          this.searchcard =true
+        }
+        if(!this.wallData)
+        {
+          this.searchcard =false
+
+        }
+      }
+     }
+  
+ 
+    if(!getvalue?.length )
+    {
+      this.wallData= this._commonServices.main_wall_data
+
+    }
+
+  }
+  name = new FormControl('');
   
   ngOnInit() {
     var self =this
@@ -46,8 +81,8 @@ export class MainWallComponent implements OnInit {
       console.log(self.panelOpenState,"hello");
    }, 1000); 
 
-   
-    
+   this.searchcard =false
+
   }
 
 }

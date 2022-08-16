@@ -23,12 +23,17 @@ export class SideWallComponent implements OnInit {
   getMainWallData(){
     this.wallData= this._commonServices.main_wall_data
     this.wallResultAnswerKey= this._commonServices.main_wall_result_answerKey
+  
+   
+    
 
 }
 
 
   ngOnInit(): void {
     this.getMainWallData()
+    const today = new Date() ;
+    console.log(today);
   }
 
 }

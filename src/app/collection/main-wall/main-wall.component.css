@@ -33,11 +33,14 @@ mat-grid-tile {
 
 .mat-card-title{
   font-size : 14px;
+  cursor: pointer;
 }
 
 @media (max-width: 480px) {
   .mat-card-title {
     font-size: 12px;
+    cursor: pointer;
+
   }
 
 .mat-card-sm-image
@@ -225,7 +228,7 @@ section {
 .wal-colmn-search-card{
 
   padding: 2px;
-
+  height: 41px;
 }
 .spiner-wall{
   position: absolute;
@@ -237,6 +240,30 @@ section {
     width: 100px;
 }
 
+.datanotfound{
+  color: red;
+
+}
+.search-card-not-found{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding: 8px;
+  top: -16px;
+  height: 38px;
+  align-items: center;
+  color: red;
+}
+.search-card-not-found .value{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding: 8px;
+  top: -16px;
+  height: 38px;
+  align-items: center;
+  color: rgb(8, 1, 1);
+}
 
 /* for ribbon */
 /* 
@@ -273,3 +300,28 @@ section {
   overflow: hidden; 
   margin: 25px auto; 
 } */
+
+.box {
+  max-width:500px;
+  height:200px;
+  margin:50px auto 0;
+  background:lightblue;
+  position:relative;
+}
+
+.ribbon-2 {
+  --f: 10px; /* control the folded part*/
+  --r: 15px; /* control the ribbon shape */
+  --t: 10px; /* the top offset */
+  
+  position: absolute;
+  inset: var(--t) calc(-1*var(--f)) auto auto;
+  padding: 0 10px var(--f) calc(10px + var(--r));
+  clip-path: 
+    polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
+      calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
+      var(--r) calc(50% - var(--f)/2));
+  background: #BD1550;
+  box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+  color: #f7f7f7;
+}

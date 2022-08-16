@@ -43,6 +43,18 @@
 
     .side-wall-new-update{
 
-        font-size: 12px;    }
-    
+    font-size: 12px;    }
+
+    .button_click{
+        width: 86px;
+        height: 20px;
+    }
+
+    .button_click span{
+        display: flex;
+        flex-direction: column;
+        margin-top: -7px;
+        font-size: 10px;
+    }    
+
 }  

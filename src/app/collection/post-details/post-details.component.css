@@ -294,7 +294,8 @@ mat-grid-tile {
   .wal-colmn-search-card{
   
     padding: 2px;
-  
+    height: 41px;
+
   }
   .post_details_appaly{
         display: flex;

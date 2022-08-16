@@ -1,12 +1,12 @@
 
 <ul class="list-group">
     <li class="list-group-item active">New Updates</li>
-    <li class="list-group-item list-item-margins" *ngFor="let itemData of wallData">
+    <li class="list-group-item list-item-margins" *ngFor="let itemData of wallData ; let i=index">
        <mat-icon >keyboard_arrow_right</mat-icon>
        <span class="link-secondary side-wall-new-update ">
-         {{ itemData?.post_name  | slice:0:35 }}...  
+        {{i+1}}   {{ itemData?.post_name  | slice:0:35 }}...  
        </span>  
-      <span class="badge rounded-pill bg-danger">New</span>
+      <span class="badge rounded-pill bg-danger" *ngIf="itemData?.isNew">New</span>
     </li>
    
   </ul>
@@ -14,11 +14,11 @@
     <mat-accordion>
       <ul class="list-group">
         <li class="list-group-item active">Result Or Answer Key</li>
-    <mat-expansion-panel  *ngFor="let itemData of wallResultAnswerKey">
+    <mat-expansion-panel  *ngFor="let itemData of wallResultAnswerKey; let i=index">
       <mat-expansion-panel-header>
         <mat-panel-title>
           <span class="link-secondary side-wall-new-update ">
-            {{ itemData?.post_name  | slice:0:35 }}...  
+         {{i+1}}   {{ itemData?.post_name  | slice:0:35 }}...  
           </span>  
         </mat-panel-title>
       
@@ -26,7 +26,9 @@
       <ng-container  *ngIf="itemData?.isResult">
         <p>Click Here to check result     <button mat-raised-button class="button_click" color="primary"><span > Result</span></button></p> 
       </ng-container>
-
+      <ng-container  *ngIf="itemData?.isAnswerKey">
+        <p> Answer Key    <button mat-raised-button class="button_click" color="accent"><span > Download Pdf</span></button></p> 
+      </ng-container>
      <!-- {{ itemData?.resultLink  || 'NA '}} -->
       <!--  <p>This is the primary content of the panel.</p>
       <p>This is the primary content of the panel.</p>
@@ -40,10 +42,11 @@
     <li class="list-group-item active">Result</li>
     <li class="list-group-item list-item-margins" *ngFor="let itemData of wallData">
        <span class="link-secondary side-wall-new-update ">
+        <mat-icon >keyboard_arrow_right</mat-icon>
          {{ itemData?.post_name  | slice:0:35 }}...  
        </span>  
-      <span class="badge rounded-pill bg-danger">New</span>
-    </li>
+       <span class="badge rounded-pill bg-danger" *ngIf="itemData?.isNew">New</span>
+      </li>
    
   </ul>
   

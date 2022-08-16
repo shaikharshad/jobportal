@@ -42,6 +42,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [],
@@ -90,7 +92,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatMenuModule,
     MatRippleModule,
     MatSlideToggleModule,
-    MatGridListModule
+    MatGridListModule,FormsModule,ReactiveFormsModule
     
   ],
   exports: [
@@ -138,7 +140,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatGridListModule,
     MatMenuModule,
     MatRippleModule,
-    MatSlideToggleModule,
+    MatSlideToggleModule,FormsModule,ReactiveFormsModule
   ]
 })
 export class MaterialModule { }

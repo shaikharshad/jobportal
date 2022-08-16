@@ -1,24 +1,25 @@
 <div class="container-flude">
-    <div class="row">
-        <div class="col-sm-8 wal-colmn">
-          <mat-card class="wal-colmn-search-card">
-            <div class="row">
-              <div class="col-4">
-                <form class="form-inline">
-                  <input class="form-control mr-sm-2 searcInput" type="search" placeholder="search" aria-label="Search">
-                  <div class="example-button-container">
-                    <button type="button" mat-mini-fab color="primary" onclick="history.back()" aria-label="Example icon button with a filter list icon">
-                      <mat-icon>chevron_left</mat-icon>
-      
-                    </button>
-                  </div> 
-                </form>
+  <div class="row">
+    <div class="col-sm-8 wal-colmn">
+      <mat-card class="wal-colmn-search-card">
+        <div class="row">
+          <div class="col-4">
+            <form class="form-inline">
+              <!-- <input class="form-control mr-sm-2 searcInput" type="search" placeholder="search" aria-label="Search"> -->
+              <div class="example-button-container searcInput">
+                <button type="button" mat-mini-fab color="primary" onclick="history.back()"
+                  aria-label="Example icon button with a filter list icon">
+                  <mat-icon>chevron_left</mat-icon>
+
+                </button>
               </div>
-              <div class="col-1">
-                           
-              </div>
-            </div>
-            <!-- <form >
+            </form>
+          </div>
+          <div class="col-1">
+
+          </div>
+        </div>
+        <!-- <form >
               <mat-form-field appearance="fill" class="searcInput">
                 <mat-label class="searchLable">type here..!</mat-label>
                 <input matInput  >
@@ -26,157 +27,254 @@
               <button type="button" mat-stroked-button class="mat-raised-button color" color="primary">Search</button>
             </form>
              -->
+      </mat-card>
+      <br>
+      <mat-card class="example-card primary">
+        <mat-card-title-group>
+          <mat-card-title> {{postDetials?.id}} {{postDetials?.post_name}}
+          </mat-card-title>
+          <mat-card-subtitle>The Shiba Inu is the smallest of the</mat-card-subtitle>
+          <img mat-card-sm-image src="{{postDetials?.post_image}}">
+        </mat-card-title-group>
+        <mat-card-content>
+          {{postDetials?.post_details}}
+
+          <br><br>
+          <mat-card>
+            <mat-card-title-group>
+              <mat-card-title class="post-detials-list">
+                <mat-list>
+                  <h3> Read carefully befor apply of this &nbsp; {{postDetials?.post_type}}</h3>
+
+                  <mat-divider></mat-divider>
+                </mat-list>
+
+              </mat-card-title>
+
+            </mat-card-title-group>
+            <mat-card-content>
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr class="post-detial-row">
+                      <th scope="col">Advertisement No.</th>
+                      <td colspan="5">:{{postDetials?.post_advertisment_no}}</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Total</th>
+                      <td colspan="5">{{postDetials?.post_no_of_post}}</td>
+                    </tr>
+                  </tbody>
+
+                  <thead>
+                    <tr>
+                      <th scope="col" class="post-detial-row">Name of the Post</th>
+                      <td colspan="5">{{postDetials?.post_type}}</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Age Limit</th>
+                      <td colspan="5">{{postDetials?.post_age_req || 'N/A'}}</td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th scope="col" class="post-detial-row">Job Location</th>
+                      <td colspan="5">{{postDetials?.post_location || 'N/A'}}</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Fee</th>
+                      <td>{{postDetials?.post_fees || 'N/A'}} /-&#8377;</td>
+                      <th scope="row">
+                        <span class="small">
+                          OBC/OPEN
+                        </span>
+                      </th>
+                      <td>{{postDetials?.post_obc_fees || 'N/A'}} /-&#8377;</td>
+                      <th scope="row">
+                        <span class="small">
+                          SC/ST/NT
+                        </span>
+                      </th>
+                      <td>{{postDetials?.post_other_fees || 'N/A'}} /-&#8377;</td>
+
+                    </tr>
+                  </tbody>
+
+                  <thead>
+                    <tr>
+                      <th scope="col" class="post-detial-row text-danger">Last Date of Online Application</th>
+                      <td colspan="2" class="text-danger"> {{postDetials?.post_closed_date || 'N/A'}}</td>
+                      <th scope="col" class="post-detial-row text-success">Date Extended</th>
+                      <td colspan="2"> <span class="text-success"> {{postDetials?.post_closed_date_extended || 'N/A'}}
+                        </span> </td>
+                    </tr>
+
+
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Official Website</th>
+                      <td colspan="5">
+                        <a href="#" class="link-primary">{{postDetials?.post_official_website || 'N/A'}}</a>
+
+                      </td>
+                    </tr>
+                  </tbody>
+
+
+                </table>
+              </div>
+
+            </mat-card-content>
           </mat-card>
           <br>
-            <mat-card class="example-card primary">
-                <mat-card-title-group>
-                    <mat-card-title> {{postDetials?.id}} {{postDetials?.post_name}}
-                    </mat-card-title>
-                    <mat-card-subtitle>The Shiba Inu is the smallest of the</mat-card-subtitle>
-                    <img mat-card-sm-image src="{{postDetials?.post_image}}">
-                </mat-card-title-group>
-                <mat-card-content>
-                  {{postDetials?.post_details}}
+          <mat-card>
+            <mat-card-title-group>
+              <mat-card-title class="post-detials-list">
+                <mat-list>
+                  <h3>Post catogray and requirment.</h3>
 
-                    <br><br>
-                    <mat-card>
-                        <mat-card-title-group>
-                            <mat-card-title class="post-detials-list"> 
-                                <mat-list>
-                                    <h3> Read carefully befor apply of this &nbsp; {{postDetials?.post_type}}</h3> 
-                                    
-                                    <mat-divider></mat-divider>
-                                </mat-list>
-                              
-                            </mat-card-title>
-                                
-                        </mat-card-title-group>
-                        <mat-card-content>
-                          <div class="table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                  <tr  class="post-detial-row">
-                                    <th scope="col" >Advertisement No.</th>
-                                    <td  colspan="5">:{{postDetials?.post_advertisment_no}}</td>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row" >Total</th>
-                                    <td  colspan="5">{{postDetials?.post_no_of_post}}</td>
-                                  </tr>
-                                </tbody>
+                  <mat-divider></mat-divider>
+                </mat-list>
 
-                                <thead>
-                                    <tr>
-                                      <th scope="col" class="post-detial-row">Name of the Post</th>
-                                      <td  colspan="5">{{postDetials?.post_type}}</td>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <th scope="row">Age Limit</th>
-                                      <td colspan="5">{{postDetials?.post_age_req || 'N/A'}}</td>
-                                    </tr>
-                                  </tbody>
-                                  <thead>
-                                    <tr>
-                                      <th scope="col" class="post-detial-row">Job Location</th>
-                                      <td colspan="5">{{postDetials?.post_location || 'N/A'}}</td>                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <th scope="row">Fee</th>
-                                      <td>{{postDetials?.post_fees || 'N/A'}} /-&#8377;</td> 
-                                      <th scope="row">
-                                        <span class="small">
-                                          OBC/OPEN
-                                        </span>
-                                       </th>
-                                       <td>{{postDetials?.post_obc_fees || 'N/A'}} /-&#8377;</td> 
-                                       <th scope="row">
-                                        <span class="small">
-                                          SC/ST/NT
-                                        </span>
-                                       </th>
-                                       <td>{{postDetials?.post_other_fees || 'N/A'}} /-&#8377;</td> 
+              </mat-card-title>
 
-                                    </tr>
-                                  </tbody>
+            </mat-card-title-group>
+            <mat-card-content>
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="4" class="post-detial-row" style="text-align:center ">Post category </th>
+                    </tr>
+                  </thead>
+                  <thead class="post_detail_table_row_color">
+                    <tr>
+                      <th scope="col" class="post-detial-row">Sr.No</th>
+                      <th scope="col" class="post-detial-row">Name of the posrt</th>
+                      <th scope="col" class="post-detial-row">Total No</th>
+                      <th scope="col" class="post-detial-row">Education</th>
 
-                                  <thead>
-                                      <tr>
-                                        <th scope="col" class="post-detial-row text-danger">Last Date of Online Application</th>
-                                        <td  colspan="2" class="text-danger"> {{postDetials?.post_closed_date || 'N/A'}}</td> 
-                                        <th scope="col" class="post-detial-row text-success">Date Extended</th>
-                                        <td  colspan="2" > <span class="text-success"> {{postDetials?.post_closed_date_extended || 'N/A'}} </span> </td> 
-                                      </tr>
-                                      
+                    </tr>
+                  </thead>
+                  <tbody class="post_detail_table_cell_color">
+                    <tr *ngFor="let item_sub of postDetials?.post_category ; let i= index">
+                      <td>{{i+1 || 'N/A'}}</td>
+                      <td>{{item_sub?.sub_post_name || 'N/A'}}</td>
+                      <td>{{item_sub?.sub_post_total_no || 'N/A'}}</td>
+                      <td>{{item_sub?.sub_post_education_req || 'N/A'}}</td>
 
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <th scope="row">Official Website</th>
-                                        <td  colspan="5">
-                                          <a href="#" class="link-primary">{{postDetials?.post_official_website || 'N/A'}}</a>
-
-                                          </td>                                       </tr>
-                                    </tbody>
+                    </tr>
+                  </tbody>
 
 
-                            </table>
-                          </div>    
 
-                        </mat-card-content>
-                    </mat-card>
-                    <br>
-                    <mat-card>
-                        <mat-card-title-group>
-                            <mat-card-title class="post-detials-list"> 
-                                <mat-list>
-                                    <h3>Post catogray and requirment.</h3> 
-                                    
-                                    <mat-divider></mat-divider>
-                                </mat-list>
-                              
-                            </mat-card-title>
-                                
-                        </mat-card-title-group>
-                        <mat-card-content>
-                          <div class="table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                      <th scope="col" colspan="4" class="post-detial-row" style="text-align:center ">Post category </th>
-                                    </tr>
-                                  </thead>
-                                <thead class="post_detail_table_row_color" >
-                                  <tr >
-                                    <th scope="col" class="post-detial-row">Sr.No</th>
-                                    <th scope="col" class="post-detial-row" >Name of the posrt</th>
-                                    <th scope="col" class="post-detial-row">Total No</th>
-                                    <th scope="col" class="post-detial-row">Education</th>
+                </table>
+              </div>
+            </mat-card-content>
+          </mat-card>
+          <br>
+          <mat-card>
+            <mat-card-title-group>
+              <mat-card-title class="post-detials-list">
+                <mat-list>
+                  <h3> Exam date and Location&nbsp; {{postDetials?.post_type}}</h3>
 
-                                  </tr>
-                                </thead>
-                                <tbody class="post_detail_table_cell_color">
-                                  <tr *ngFor="let item_sub of postDetials?.post_category ; let i= index">
-                                    <td >{{i+1 || 'N/A'}}</td>                                     
-                                    <td>{{item_sub?.sub_post_name || 'N/A'}}</td>                                       
-                                    <td>{{item_sub?.sub_post_total_no || 'N/A'}}</td>                                       
-                                    <td>{{item_sub?.sub_post_education_req || 'N/A'}}</td>                                      
+                  <mat-divider></mat-divider>
+                </mat-list>
 
-                                  </tr>
-                                </tbody>
+              </mat-card-title>
 
-                                
+            </mat-card-title-group>
+            <mat-card-content>
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr class="post-detial-row">
+                      <th scope="col">Advertisement No.</th>
+                      <td  colspan="5" >:{{postDetials?.post_advertisment_no}}</td>
+                    </tr>
+                  </thead>
+                  <!-- <tbody>
+                    <tr>
+                      <th scope="row">Total</th>
+                      <td colspan="5">{{postDetials?.post_no_of_post}}</td>
+                    </tr>
+                  </tbody> -->
 
-                            </table>
-                          </div>     
-                        </mat-card-content>
-                    </mat-card>
-                    <br>
-                    <!-- <mat-card>
+                  <thead>
+                    <tr>
+                      <th scope="col"  class="post-detial-row">Name of the Post</th>
+                      <td colspan="5"  >{{postDetials?.post_type}}</td>
+                    </tr>
+                  </thead>
+                   <!-- <tbody>
+                   <tr>
+                      <th scope="row">Age Limit</th>
+                      <td colspan="5">{{postDetials?.post_age_req || 'N/A'}}</td>
+                    </tr>
+                  </tbody> -->
+                  <thead>
+                    <tr>
+                      <th scope="col" class="post-detial-row">Exame  Location / Center</th>
+                      <td  colspan="5" >{{postDetials?.post_location || 'N/A'}}</td>
+                    </tr>
+                  </thead>
+                  <!-- <tbody>
+                    <tr>
+                      <th scope="row">Fee</th>
+                      <td>{{postDetials?.post_fees || 'N/A'}} /-&#8377;</td>
+                      <th scope="row">
+                        <span class="small">
+                          OBC/OPEN
+                        </span>
+                      </th>
+                      <td>{{postDetials?.post_obc_fees || 'N/A'}} /-&#8377;</td>
+                      <th scope="row">
+                        <span class="small">
+                          SC/ST/NT
+                        </span>
+                      </th>
+                      <td>{{postDetials?.post_other_fees || 'N/A'}} /-&#8377;</td>
+
+                    </tr>
+                  </tbody> -->
+
+                  <thead>
+                    <tr>
+                      <th scope="col" class="post-detial-row text-danger">Exame  Date</th>
+                      <td  class="text-danger" > {{postDetials?.post_closed_date || 'N/A'}}</td>
+                      <th scope="col" class="post-detial-row text-success">Date Extended</th>
+                      <td > <span class="text-success"> {{postDetials?.post_closed_date_extended || 'N/A'}}
+                        </span> </td>
+                    </tr>
+
+
+                  </thead>
+                  <!-- <tbody>
+                    <tr>
+                      <th scope="row">Official Website</th>
+                      <td colspan="5">
+                        <a href="#" class="link-primary">{{postDetials?.post_official_website || 'N/A'}}</a>
+
+                      </td>
+                    </tr>
+                  </tbody> -->
+
+
+                </table>
+              </div>
+
+            </mat-card-content>
+          </mat-card>
+          <br>
+          <!-- <mat-card>
                       <mat-card-title-group>
                           <mat-card-title class="post-detials-list"> 
                               <mat-list>
@@ -247,17 +345,17 @@
 
                       </mat-card-content>
                   </mat-card> -->
-                  <br>
-                  <mat-card>
-                    <mat-card-content class="post_details_appaly">
-                          <button mat-flat-button color="primary"><span class="post_applay_lable">Applay online</span>  </button>
-                          &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;
-                          <button mat-flat-button color="accent"><span class="post_applay_lable">View Pdf</span></button>
-                    
-                    </mat-card-content>
-                  </mat-card>
-                <br>
-                    <!-- <mat-list >
+          <br>
+          <mat-card>
+            <mat-card-content class="post_details_appaly">
+              <button mat-flat-button color="primary"><span class="post_applay_lable">Applay online</span> </button>
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+              <button mat-flat-button color="accent"><span class="post_applay_lable">View Pdf</span></button>
+
+            </mat-card-content>
+          </mat-card>
+          <br>
+          <!-- <mat-list >
                         <mat-list-item class="post-detials-list">Discription No Lorem Ipsum</mat-list-item>
                         <mat-divider></mat-divider>
                             <div class="container">
@@ -281,7 +379,7 @@
                         <mat-list-item class="post-detials-list">Discription No 3</mat-list-item>
                       </mat-list> -->
 
-                    <!-- <mat-list>
+          <!-- <mat-list>
                         <mat-list-item>
                             <h2><span class="badge bg-primary">Discription No 1 </span></h2>
                         </mat-list-item>
@@ -294,14 +392,14 @@
                             <h2><span class="badge bg-primary">Discription No 3 </span></h2>
                         </mat-list-item>
                     </mat-list> -->
-                </mat-card-content>
-            </mat-card>
-            <br>
-            
-        </div>
+        </mat-card-content>
+      </mat-card>
+      <br>
 
-        <div class="col-sm-4  wal-colmn-side">
-            <app-side-wall></app-side-wall>
-        </div>
     </div>
+
+    <div class="col-sm-4  wal-colmn-side">
+      <app-side-wall></app-side-wall>
+    </div>
+  </div>
 </div>
