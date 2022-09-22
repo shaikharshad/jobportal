@@ -27,6 +27,7 @@
     "@ngx-translate/http-loader": "^7.0.0",
     "@popperjs/core": "^2.10.2",
     "bootstrap": "^5.2.0",
+    "firebase": "^9.10.0",
     "httpclient": "^0.1.0",
     "material-responsive-grid": "^1.1.1",
     "rxjs": "~7.5.0",

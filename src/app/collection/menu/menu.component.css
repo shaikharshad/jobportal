@@ -1,3 +1,7 @@
+.main-rounter{
+    overflow-x: hidden;
+}
+
 .menu-spacer {
     flex: 1 1 auto;
   }
@@ -107,7 +111,7 @@
   }
 
   .mat-drawer-container, .mat-sidenav-container {
-    background-color: #f3f3f3f7;
+    background-color: #f7f9f7;
   }
 
   
