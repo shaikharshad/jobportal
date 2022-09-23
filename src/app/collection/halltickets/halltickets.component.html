@@ -1,0 +1,105 @@
+<div class="container-flude">
+    <div class="row">
+        <div class="col-sm-8 wal-colmn">
+            <mat-card class="wal-colmn-title-card">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 titleformates">
+                           <div>
+                               <h1>HallTicket (Admit Card)</h1>
+                               <p class="link-secondary">
+                                Latest  Exam Hall Ticket / Admit Card 2022 Download – Sarkari Exams 2022 Admit Card, Exam Date All Govt Jobs exam Admit Card download direct link updated. Latest alerts of competitive exams hall ticket release date available. Find Exam Instructions in the call letter. The Admit card is an important document that allows you to take the written test of any recruitment examination. We provide all Admit Card links and details on this page.
+                               </p> 
+                           </div> 
+                        </div>
+    
+                    </div>
+                </div>
+                <!-- <form >
+                    <mat-form-field appearance="fill" class="searcInput">
+                    <mat-label class="searchLable">type here..!</mat-label>
+                    <input matInput  >
+                    </mat-form-field>
+                    <button type="button" mat-stroked-button class="mat-raised-button color" color="primary">Search</button>
+                    </form>
+                    -->
+            </mat-card>
+            <br>
+            <mat-card class="wal-colmn-search-card">
+                <div class="row">
+                    <div class="col-4">
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2 searcInput" value="" (keyup)="get()" (click)="get()"
+                                [formControl]="name" type="search" placeholder="search" aria-label="Search">
+                            <!-- <p>Value: {{ name.value }}</p> -->
+
+                            <!-- <div class="example-button-container">
+                            <button mat-mini-fab color="primary" aria-label="Example icon button with a filter list icon">
+                            <mat-icon>chevron_left</mat-icon>
+
+                            </button>
+                            </div>  -->
+                        </form>
+                    </div>
+
+                </div>
+                <!-- <form >
+                    <mat-form-field appearance="fill" class="searcInput">
+                    <mat-label class="searchLable">type here..!</mat-label>
+                    <input matInput  >
+                    </mat-form-field>
+                    <button type="button" mat-stroked-button class="mat-raised-button color" color="primary">Search</button>
+                    </form>
+                    -->
+            </mat-card>
+            <br>
+            <ng-container *ngIf="!wallData?.length ">
+                <span class="datanotfound" class="search-card-not-found"> <label for=""> Post not available or please
+                        check spelling </label> </span>
+            </ng-container>
+            <ng-container *ngIf="searchcard && wallData.length ">
+                <span class="datanotfound" class="search-card-not-found"> <label for="" class="value"> {{ name.value }}
+                    </label> </span>
+            </ng-container>
+            <mat-accordion>
+                <ul class="list-group">
+                    <li>
+
+                        <mat-expansion-panel *ngFor="let item of wallResultAnswerKey  ; let i = index">
+                            <mat-expansion-panel-header class="mat-expansion-panel-header">
+                                <mat-panel-title>
+                                    <span class="link-secondary side-wall-new-update ">
+                                        <img mat-card-sm-image src="{{item?.post_image}}">
+                                        {{ item?.post_name }} {{item?.post_name.length < 20 ? '' : '...' }} </span>
+
+                                            <!-- <span class="badge rounded-pill bg-danger" *ngIf="item?.isNew">New</span> -->
+                                            <br>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <br>
+                            <ng-container *ngIf="item?.IshallticketsDownloadLinks">
+                                <button mat-raised-button class="button_click" color="primary"><span> Click
+                                        Here</span></button>
+                            </ng-container>
+                            &nbsp;
+                            <ng-container *ngIf="item?.isAnswerKey">
+                                <button mat-raised-button class="button_click" color="accent"><span> Answer
+                                        key</span></button>
+                            </ng-container>
+                            <!-- {{ itemData?.resultLink  || 'NA '}} -->
+                            <!--  <p>This is the primary content of the panel.</p>
+<p>This is the primary content of the panel.</p>
+<p>This is the primary content of the panel.</p> -->
+
+                        </mat-expansion-panel>
+                    </li>
+                    <br>
+                </ul>
+            </mat-accordion>
+        </div>
+
+        <div class="col-sm-4  wal-colmn-side">
+            <app-side-wall></app-side-wall>
+        </div>
+    </div>
+</div>

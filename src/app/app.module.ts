@@ -15,6 +15,9 @@ import { PostDetailsComponent } from './collection/post-details/post-details.com
 import { SideWallComponent } from './collection/side-wall/side-wall.component';
 import { FooterComponent } from './collection/footer/footer.component';
 import { MegabhartiComponent } from './collection/megabharti/megabharti.component';
+import { HallticketsComponent } from './collection/halltickets/halltickets.component';
+import { ExamesComponent } from './collection/exames/exames.component';
+import { ResultsComponent } from './collection/results/results.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { MegabhartiComponent } from './collection/megabharti/megabharti.componen
     PostDetailsComponent,
     SideWallComponent,
     FooterComponent,
-    MegabhartiComponent,    
+    MegabhartiComponent,
+    HallticketsComponent,
+    ExamesComponent,
+    ResultsComponent,    
   ],
   imports: [
     BrowserModule,

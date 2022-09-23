@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminloginComponent } from './collection/adminlogin/adminlogin.component';
+import { ExamesComponent } from './collection/exames/exames.component';
 import { FooterComponent } from './collection/footer/footer.component';
+import { HallticketsComponent } from './collection/halltickets/halltickets.component';
 import { HeaderComponent } from './collection/header/header.component';
 import { MainWallComponent } from './collection/main-wall/main-wall.component';
 import { MegabhartiComponent } from './collection/megabharti/megabharti.component';
 import { MenuComponent } from './collection/menu/menu.component';
 import { PostDetailsComponent } from './collection/post-details/post-details.component';
+import { ResultsComponent } from './collection/results/results.component';
 
 const routes: Routes = [
 { path : '', component:MainWallComponent},
@@ -23,6 +26,9 @@ const routes: Routes = [
 { path: 'privacypolicy', loadChildren: () => import('./collection/staticpages/privacypolicy/privacypolicy.module').then(m => m.PrivacypolicyModule) },
 { path: 'termandcondition', loadChildren: () => import('./collection/staticpages/termandcondition/termandcondition.module').then(m => m.TermandconditionModule) },
 { path : 'megabharti' ,component: MegabhartiComponent },
+{ path : 'halltickets' ,component: HallticketsComponent },
+{ path : 'exames' ,component: ExamesComponent },
+{ path : 'results' ,component: ResultsComponent },
 
 ];
 
