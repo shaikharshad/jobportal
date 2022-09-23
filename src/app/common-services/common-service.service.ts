@@ -801,6 +801,8 @@ export class CommonServiceService {
     "post_fees":500,
     "post_exam_date":'16-08-2022',
     "post_official_website":'www.google.com',
+    "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+
     },
     {
     "id" :2,
@@ -815,6 +817,8 @@ export class CommonServiceService {
     "post_fees":500,
     "post_exam_date":'20-12-2023',
     "post_official_website":'www.google.com',
+    "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+
     },
     {
     "id" :3,
@@ -825,10 +829,13 @@ export class CommonServiceService {
     "post_closed_date": '02-07-2022',
     "post_closed_date_extended": '02-08-2022',
     "isActive":true,
+    "isNew":true,
     "post_location":'parbhani',
     "post_fees":500,
     "post_exam_date":'20-12-2023',
     "post_official_website":'www.google.com',
+    "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+
     },
     {
     "id" :4,
@@ -843,6 +850,8 @@ export class CommonServiceService {
     "post_fees":500,
     "post_exam_date":'20-12-2023',
     "post_official_website":'www.google.com',
+    "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+
     },
     {
     "id" :5,
@@ -853,10 +862,13 @@ export class CommonServiceService {
     "post_closed_date": '02-07-2022',
     "post_closed_date_extended": '02-08-2022',
     "isActive":true,
+    "isNew":true,
     "post_location":'parbhani',
     "post_fees":500,
     "post_exam_date":'20-12-2023',
     "post_official_website":'www.google.com',
+    "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+
     },
   ]
 
@@ -878,6 +890,7 @@ export class CommonServiceService {
        "resultDate" :"20-3-3034",
        "resultLink":"",
        "isAnswerKey":true,
+       "isNew":true,
        "answerKeyDate":"20-3-3034",
        "anserKeypdfLink": "",
        
@@ -896,6 +909,8 @@ export class CommonServiceService {
         "post_exam_date":'20-12-2023',
         "post_official_website":'www.google.com',
         "isResult":true,
+        "isNew":true,
+
         "resultDate" :"20-3-3034",
         "resultLink":"",
         "isAnswerKey":false,

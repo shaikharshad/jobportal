@@ -11,8 +11,8 @@
     
     <article class="leaderboard">
       <main class="leaderboard__profiles">
-        <article class="leaderboard__profile list-group-item list-item-margins" *ngFor="let itemData of wallData ; let i=index">
-          <img src="{{itemData?.post_image}}" alt="Mark Zuckerberg" class="leaderboard__picture">
+        <article class="leaderboard__profile list-group-item list-item-margins" *ngFor="let itemData of wallData  ; let i=index">
+          <img src="{{itemData?.post_image}}"  alt="Mark Zuckerberg" class="leaderboard__picture">
           <span class="leaderboard__name link-secondary side-wall-new-update">   {{ itemData?.post_name  | slice:0:35 }}... </span>
           <span class="badge rounded-pill bg-danger" *ngIf="itemData?.isNew">New</span>
         </article>
@@ -33,6 +33,8 @@
           <span class="link-secondary side-wall-new-update ">
          {{ itemData?.post_name  | slice:0:35 }}...  
           </span>  
+          <span class="badge rounded-pill bg-danger" *ngIf="itemData?.isNew">New</span>
+
         </mat-panel-title>
       
       </mat-expansion-panel-header>

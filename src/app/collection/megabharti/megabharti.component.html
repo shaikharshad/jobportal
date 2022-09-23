@@ -1,0 +1,101 @@
+
+<div class="container-flude">
+    <div class="row">
+      <div class="col-sm-8 wal-colmn"   >
+        
+        <mat-card class="wal-colmn-search-card">
+          <div class="row">
+            <div class="col-4">
+              <form class="form-inline">
+                <input class="form-control mr-sm-2 searcInput"  value="" (keyup)="get()" (click)="get()" [formControl]="name" type="search" placeholder="search" aria-label="Search">
+                <!-- <p>Value: {{ name.value }}</p> -->
+  
+                <!-- <div class="example-button-container">
+                  <button mat-mini-fab color="primary" aria-label="Example icon button with a filter list icon">
+                    <mat-icon>chevron_left</mat-icon>
+    
+                  </button>
+                </div>  -->
+              </form>
+            </div>
+           
+          </div>
+          <!-- <form >
+            <mat-form-field appearance="fill" class="searcInput">
+              <mat-label class="searchLable">type here..!</mat-label>
+              <input matInput  >
+            </mat-form-field>
+            <button type="button" mat-stroked-button class="mat-raised-button color" color="primary">Search</button>
+          </form>
+           -->
+          </mat-card>
+          <br>
+    
+          <ng-container *ngIf="!wallData?.length "  >
+             <span class="datanotfound" class="search-card-not-found"  > <label for=""> Post not available or please check spelling  </label> </span>  
+            </ng-container>
+            <ng-container *ngIf="searchcard && wallData.length " >
+               <span class="datanotfound" class="search-card-not-found"   > <label for="" class="value">  {{ name.value }} </label> </span>  
+             </ng-container>
+       
+        <div class="spiner-wall" *ngIf="!panelOpenState">
+          <div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        
+        <ng-container *ngFor="let item of wallData  ; let i = index" >
+          <mat-card class="example-card primary parent"  >
+            <!-- <div class="ribbon-2" *ngIf="!item?.isActive">Closed</div> -->
+            <!-- <h4 class="ribbon">Closed</h4> -->
+            
+            <mat-card-title-group>
+                  <img mat-card-sm-image src="{{item?.post_image}}" >
+                <mat-card-title [routerLink]="[ '/post-details',item?.id]" >  {{i+1}} {{ item?.post_name }}
+                  {{item?.post_name.length < 20 ? '' : '...'}}
+  
+                </mat-card-title>
+                <mat-card-subtitle> <span class="strong">  <b> Location : </b></span>{{ item?.post_location }} <span class="strong">  <b> Job type : </b></span>{{ item?.post_short_details }}   </mat-card-subtitle>
+              </mat-card-title-group>
+              <!-- <mat-card-content >`
+               
+                {{ item?.post_details  | slice:0:200 }}...  
+              </mat-card-content> -->
+              
+              <mat-card-actions class="mat-card-actions"> 
+                <p><small class="mat-stroked-button-wall-text text-danger">Last Date :{{item?.post_closed_date}}</small></p>
+                <!-- <p><small>Fees: 500 /- .</small></p> -->
+                <!-- <button mat-stroked-button color="warn"> Last Date :</button>
+                <button mat-stroked-button color="primary"> Fees : </button> -->
+                <!-- <button mat-stroked-button  class="mat-stroked-button-wall" color="primary">Download Pdf</button> -->
+                <button mat-stroked-button [routerLink]="[ '/post-details',item?.id]"  class="mat-stroked-button-wall" color="primary">Read More...</button>
+                <!-- <button mat-stroked-button [routerLink]="['/post-details']" [queryParams]="{ id: item?.id , skipLocationChange: true
+                } "  class="mat-stroked-button-wall" color="primary">Read More...</button> -->
+  
+              </mat-card-actions>
+             
+            </mat-card>
+            <br>
+          </ng-container>
+      
+          <mat-paginator [length]="100"
+                [pageSize]="10"
+                [pageSizeOptions]="[5, 10, 25, 100]"
+                aria-label="Select page">
+          </mat-paginator>
+  
+      </div>
+     
+      <div class="col-sm-4  wal-colmn-side">
+        <app-side-wall></app-side-wall>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  

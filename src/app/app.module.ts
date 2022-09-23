@@ -14,6 +14,7 @@ import { HttpClientModule  } from '@angular/common/http';
 import { PostDetailsComponent } from './collection/post-details/post-details.component';
 import { SideWallComponent } from './collection/side-wall/side-wall.component';
 import { FooterComponent } from './collection/footer/footer.component';
+import { MegabhartiComponent } from './collection/megabharti/megabharti.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './collection/footer/footer.component';
     AdminloginComponent,
     PostDetailsComponent,
     SideWallComponent,
-    FooterComponent,    
+    FooterComponent,
+    MegabhartiComponent,    
   ],
   imports: [
     BrowserModule,

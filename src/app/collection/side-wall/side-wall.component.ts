@@ -21,7 +21,7 @@ export class SideWallComponent implements OnInit {
   wallData:any
   wallResultAnswerKey:any 
   getMainWallData(){
-    this.wallData= this._commonServices.main_wall_data
+    this.wallData= this._commonServices.main_wall_New_post
     this.wallResultAnswerKey= this._commonServices.main_wall_result_answerKey
   
    
