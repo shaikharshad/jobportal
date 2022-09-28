@@ -29,6 +29,8 @@ const routes: Routes = [
 { path : 'halltickets' ,component: HallticketsComponent },
 { path : 'exames' ,component: ExamesComponent },
 { path : 'results' ,component: ResultsComponent },
+{ path: 'AdminLogin', loadChildren: () => import('./admin-login/admin-login.module').then(m => m.AdminLoginModule) },
+{ path: 'Dashboard', loadChildren: () => import('./Admin/dashboard/dashboard.module').then(m => m.DashboardModule) },
 
 ];
 

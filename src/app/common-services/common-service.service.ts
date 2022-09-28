@@ -8,7 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 export class CommonServiceService {
 
   constructor( private http : HttpClient) { }
+  AdminLogin =[{
+    "id":1 ,
+    "username": "arshad",
+    "emailId":"arshad@gmail.com",
+    "password": "a",
+    "LoginType":"superAdmin"
 
+  }]
   main_wall_data =[
     {
       "id" :1,
