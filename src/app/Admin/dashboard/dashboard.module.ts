@@ -15,8 +15,7 @@ import { MaterialExampleModule } from '../../material/dashboard.module'
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    MaterialModule,
-    MaterialExampleModule
+    MaterialModule
 
   ]
 })

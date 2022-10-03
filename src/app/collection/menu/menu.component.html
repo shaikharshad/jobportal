@@ -2,7 +2,7 @@
 
 
 <div [hidden]="!isVisible">
-    <mat-toolbar color="primary" width="">
+    <mat-toolbar color="primary" width="" >
       <mat-toolbar-row>
         <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
           <mat-icon>menu</mat-icon>
@@ -21,9 +21,9 @@
       </mat-toolbar-row>
     </mat-toolbar>
   
-    <mat-sidenav-container fxFlexFill>
-      <mat-sidenav #sidenav>
-        <mat-nav-list>
+    <!-- <mat-sidenav-container fxFlexFill> -->
+      <mat-sidenav #sidenav class="sideNave"> 
+        <mat-nav-list class="mat-drawer">
           <a (click)="sidenav.toggle()"  mat-list-item><mat-icon>close</mat-icon>
           </a>
           <a href="#" (click)="sidenav.toggle()"  [routerLink]="['/main-wall']" routerLinkActive="router-link-active" mat-list-item><mat-icon>home</mat-icon>&nbsp;<span class="small_menu"> <small>Home </small></span></a>
@@ -32,22 +32,24 @@
           <a href="#"  (click)="sidenav.toggle()" [routerLink]="['/exames']"mat-list-item> <mat-icon> border_color</mat-icon>&nbsp;<span class="small_menu"><small>Exame's</small></span></a>
           <a href="#"  (click)="sidenav.toggle()" [routerLink]="['/results']"mat-list-item> <mat-icon>question_answer</mat-icon>&nbsp;<span class="small_menu"><small>Results </small></span></a>
           <a href="#" (click)="sidenav.toggle()" [routerLink]="['/megabharti']"mat-list-item> <mat-icon>public</mat-icon>&nbsp;<span class="small_menu"><small>General Knowledge</small></span></a>
+          
         </mat-nav-list>
+        
       </mat-sidenav>
-      <mat-sidenav-content fxFlexFill  class="main-rounter" >
+      <!-- <mat-sidenav-content fxFlexFill  class="main-rounter" > -->
        
-        <div class="container-flude">
+        <!-- <div class="container-flude">
           <div class="row">
             <div class="col-sm-12 " >
-              <!-- <router-outlet></router-outlet> -->
+                  aa            
               </div>
             </div>
          
         </div>
+         -->
         
-        
-      
-      </mat-sidenav-content>
-    </mat-sidenav-container>
+
+      <!-- </mat-sidenav-content> -->
+    <!-- </mat-sidenav-container> -->
   </div>
   <!-- <app-footer></app-footer> -->

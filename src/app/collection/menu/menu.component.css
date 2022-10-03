@@ -114,4 +114,32 @@
     background-color: #f7f9f7;
   }
 
+ .mat-drawer-container
+  {
+    /* position: relative; */
+    z-index: 1;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    overflow: hidden;
+  }
+
+  .sideNave{
+    transform: none;
+    visibility: visible;
+    z-index: 1;
+    position: absolute;
+    /* margin-top: 135px; */
+    /* backdrop-filter: blur(5px); */
+    height: auto;
+    max-width: 100%;
+    /* -webkit-box-shadow: 200px 0px 300px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 200px 0px 300px 0px rgba(0,0,0,0.45);
+    box-shadow: 200px 0px 300px 0px rgba(0,0,0,0.45); */
+  transition: margin-left .5s;
+
+  }
+  .mat-drawer
+  {
+  }
   
