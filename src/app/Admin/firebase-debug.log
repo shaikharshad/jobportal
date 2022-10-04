@@ -1,0 +1,135 @@
+[debug] [2022-10-04T21:19:18.565Z] ----------------------------------------------------------------------
+[debug] [2022-10-04T21:19:18.569Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2022-10-04T21:19:18.569Z] CLI Version:   11.9.0
+[debug] [2022-10-04T21:19:18.570Z] Platform:      linux
+[debug] [2022-10-04T21:19:18.570Z] Node Version:  v14.20.0
+[debug] [2022-10-04T21:19:18.640Z] Time:          Wed Oct 05 2022 02:49:18 GMT+0530 (India Standard Time)
+[debug] [2022-10-04T21:19:18.640Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-04T21:19:18.654Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-10-04T21:19:18.794Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-04T21:19:18.794Z] > authorizing via signed-in user (sshakerpbn@gmail.com)
+[debug] [2022-10-04T21:19:18.794Z] [iam] checking project demoportal-2eb2a for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-04T21:19:18.795Z] > refreshing access token with scopes: []
+[debug] [2022-10-04T21:19:18.796Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-04T21:19:18.797Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-04T21:19:19.672Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-10-04T21:19:19.673Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-04T21:19:19.766Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/demoportal-2eb2a:testIamPermissions [none]
+[debug] [2022-10-04T21:19:19.766Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/demoportal-2eb2a:testIamPermissions x-goog-quota-user=projects/demoportal-2eb2a
+[debug] [2022-10-04T21:19:19.766Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/demoportal-2eb2a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-04T21:19:20.213Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-10-04T21:19:20.213Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-10-04T21:19:22.147Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/demoportal-2eb2a:testIamPermissions 200
+[debug] [2022-10-04T21:19:22.147Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/demoportal-2eb2a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-04T21:19:22.149Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/demoportal-2eb2a [none]
+[debug] [2022-10-04T21:19:24.168Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/demoportal-2eb2a 200
+[debug] [2022-10-04T21:19:24.169Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/demoportal-2eb2a {"projectId":"demoportal-2eb2a","projectNumber":"742358239926","displayName":"demoPortal","name":"projects/demoportal-2eb2a","resources":{"hostingSite":"demoportal-2eb2a"},"state":"ACTIVE","etag":"1_69f2294e-f6aa-4c0f-8c1a-a2b401422418"}
+[info] 
+[info] === Deploying to 'demoportal-2eb2a'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-10-04T21:19:24.175Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/demoportal-2eb2a [none]
+[debug] [2022-10-04T21:19:25.717Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/demoportal-2eb2a 200
+[debug] [2022-10-04T21:19:25.717Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/demoportal-2eb2a {"projectId":"demoportal-2eb2a","projectNumber":"742358239926","displayName":"demoPortal","name":"projects/demoportal-2eb2a","resources":{"hostingSite":"demoportal-2eb2a"},"state":"ACTIVE","etag":"1_69f2294e-f6aa-4c0f-8c1a-a2b401422418"}
+[debug] [2022-10-04T21:19:25.722Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/742358239926/sites/demoportal-2eb2a/versions [none]
+[debug] [2022-10-04T21:19:25.722Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/742358239926/sites/demoportal-2eb2a/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-10-04T21:19:28.405Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/742358239926/sites/demoportal-2eb2a/versions 200
+[debug] [2022-10-04T21:19:28.406Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/742358239926/sites/demoportal-2eb2a/versions {"name":"projects/742358239926/sites/demoportal-2eb2a/versions/c5f624022b443930","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[demoportal-2eb2a]: beginning deploy... 
+[info] i  hosting[demoportal-2eb2a]: found 21 files in dist/jobportal 
+[debug] [2022-10-04T21:19:28.423Z] [hosting] uploading with 200 concurrency
+[debug] [2022-10-04T21:19:28.651Z] [hosting] hash cache [ZGlzdC9qb2Jwb3J0YWw] stored for 21 files
+[debug] [2022-10-04T21:19:28.652Z] [hosting][hash queue][FINAL] {"max":171,"min":30,"avg":50.095238095238095,"active":0,"complete":21,"success":21,"errored":0,"retried":0,"total":21,"elapsed":184}
+[debug] [2022-10-04T21:19:28.653Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/742358239926/sites/demoportal-2eb2a/versions/c5f624022b443930:populateFiles [none]
+[debug] [2022-10-04T21:19:28.653Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/742358239926/sites/demoportal-2eb2a/versions/c5f624022b443930:populateFiles {"files":{"/111.65df1c532136b9ff.js":"deab19bea5ee2dace3a9c2c3dbc26ceac22931743b1742f760fcfe0a6d56b2a0","/217.bc55065128171266.js":"65a60f31df31c31e8a707c76dbcb773840e439663c81c0af02e8728bb1376fac","/30.34203e0e7bae6072.js":"34bdd88802a023f309141b8e5d6ac0b66fba934bdf0ebc4ca4d47f0e57dd7fbe","/360.4ecaa1a5829d010e.js":"fba746f1521d28440b995b9c758f3b0953e37f9e6e90aa0d8a0b7c4d26922c92","/3rdpartylicenses.txt":"bb26c2fbe6a4ee4400d0f39f4dd52feb0bfdd5a946341afda36a3a197363a43f","/61.e39ca44ca41b27d4.js":"e72a01cd1953f4f5a178619dd7ddee2dace2cab75ae31d24bd5b9d411f1ab054","/606.6d42e0919a7226e4.js":"2e638f00239f74007c7f9d76de1253c5980983631b4d00bb1145253fd8ad2a8e","/632.4d46f1be8dcc0685.js":"fbe5cbd44a99e6ce8d7783d9fc5de0b50044d1dc3a702a7fd309b7cd316009f8","/730.0f5e4f4361f6adb8.js":"df059d742537035bf173a72ae80d5553067240d911060cbba68c20aba455cdbc","/favicon.ico":"5ba04cf43d3c8c026bd5edd43046db96acb28b5686d99ea7d7e148feabfffc8f","/index.html":"75befd70dd63ac8b1e243940bfe734a8efecf26316fa3bab55a46ce4e3de8ec4","/runtime.7a3669b820c93219.js":"55701b6f0c77bc148431d04893858988d5e0d0bf653db717ba015e541eff7663","/assets/localJsonData.json":"3789746fd95f48ae3497654f86c20014fda5b6e3f1074dd83a2fbc4cecf72f15","/assets/i18n/de.json":"58cafcf3ad659dcdd6a85781ab9b283e746a54732b505615f91f08157ab59cc1","/assets/i18n/en.json":"bc88114e596e57e10a15b5ceb2a6c4b1b7bb0304931fda57f72cc153d3fc9974","/polyfills.d9aa30500b6946ee.js":"ad3ae71ea023fbd83adf6e3b7aba1e2e5a25b2893875dd6151b389cdefcc2ca2","/styles.17313fc77a566641.css":"918624c43d951ecffc81a5a5fb5b32c8f15eb076ee7da8abd927fc02e900908f","/766.30f848326f2c0db5.js":"1e4937693bc8ed1f79d8f78d8f33069a50d54e489211ec7921087cab86a9aee5","/assets/wallpaper.png":"dfc2cf8e71469063647bfa8e2d9d07d68bff30b814027b8eee2b5ee772c566d0","/main.aac4c136e11e5114.js":"d0da72a76f2ea5adeb0f5639ceba3aa5ce0ffbef48a507b2143ee0e7e92203d2","/assets/wallpaper.psd":"e18322fce6b242a03c26ca0da08856287ff9026960157449ab6328f6f8d1c0c1"}}
+[debug] [2022-10-04T21:19:30.667Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/742358239926/sites/demoportal-2eb2a/versions/c5f624022b443930:populateFiles 200
+[debug] [2022-10-04T21:19:30.668Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/742358239926/sites/demoportal-2eb2a/versions/c5f624022b443930:populateFiles {"uploadRequiredHashes":["55701b6f0c77bc148431d04893858988d5e0d0bf653db717ba015e541eff7663","fbe5cbd44a99e6ce8d7783d9fc5de0b50044d1dc3a702a7fd309b7cd316009f8","1e4937693bc8ed1f79d8f78d8f33069a50d54e489211ec7921087cab86a9aee5","deab19bea5ee2dace3a9c2c3dbc26ceac22931743b1742f760fcfe0a6d56b2a0","d0da72a76f2ea5adeb0f5639ceba3aa5ce0ffbef48a507b2143ee0e7e92203d2","65a60f31df31c31e8a707c76dbcb773840e439663c81c0af02e8728bb1376fac","75befd70dd63ac8b1e243940bfe734a8efecf26316fa3bab55a46ce4e3de8ec4"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files"}
+[debug] [2022-10-04T21:19:30.673Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/55701b6f0c77bc148431d04893858988d5e0d0bf653db717ba015e541eff7663 [none]
+[debug] [2022-10-04T21:19:30.673Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/55701b6f0c77bc148431d04893858988d5e0d0bf653db717ba015e541eff7663 [stream]
+[debug] [2022-10-04T21:19:30.676Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/fbe5cbd44a99e6ce8d7783d9fc5de0b50044d1dc3a702a7fd309b7cd316009f8 [none]
+[debug] [2022-10-04T21:19:30.676Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/fbe5cbd44a99e6ce8d7783d9fc5de0b50044d1dc3a702a7fd309b7cd316009f8 [stream]
+[debug] [2022-10-04T21:19:30.678Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/1e4937693bc8ed1f79d8f78d8f33069a50d54e489211ec7921087cab86a9aee5 [none]
+[debug] [2022-10-04T21:19:30.678Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/1e4937693bc8ed1f79d8f78d8f33069a50d54e489211ec7921087cab86a9aee5 [stream]
+[debug] [2022-10-04T21:19:30.680Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/deab19bea5ee2dace3a9c2c3dbc26ceac22931743b1742f760fcfe0a6d56b2a0 [none]
+[debug] [2022-10-04T21:19:30.680Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/deab19bea5ee2dace3a9c2c3dbc26ceac22931743b1742f760fcfe0a6d56b2a0 [stream]
+[debug] [2022-10-04T21:19:30.681Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/d0da72a76f2ea5adeb0f5639ceba3aa5ce0ffbef48a507b2143ee0e7e92203d2 [none]
+[debug] [2022-10-04T21:19:30.681Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/d0da72a76f2ea5adeb0f5639ceba3aa5ce0ffbef48a507b2143ee0e7e92203d2 [stream]
+[debug] [2022-10-04T21:19:30.682Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/65a60f31df31c31e8a707c76dbcb773840e439663c81c0af02e8728bb1376fac [none]
+[debug] [2022-10-04T21:19:30.682Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/65a60f31df31c31e8a707c76dbcb773840e439663c81c0af02e8728bb1376fac [stream]
+[debug] [2022-10-04T21:19:30.683Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/75befd70dd63ac8b1e243940bfe734a8efecf26316fa3bab55a46ce4e3de8ec4 [none]
+[debug] [2022-10-04T21:19:30.683Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/75befd70dd63ac8b1e243940bfe734a8efecf26316fa3bab55a46ce4e3de8ec4 [stream]
+[debug] [2022-10-04T21:19:30.684Z] [hosting][populate queue][FINAL] {"max":2024,"min":2024,"avg":2024,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2036}
+[debug] [2022-10-04T21:19:30.684Z] [hosting] uploads queued: 7
+[debug] [2022-10-04T21:19:33.545Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/1e4937693bc8ed1f79d8f78d8f33069a50d54e489211ec7921087cab86a9aee5 200
+[debug] [2022-10-04T21:19:33.545Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/1e4937693bc8ed1f79d8f78d8f33069a50d54e489211ec7921087cab86a9aee5 [stream]
+[debug] [2022-10-04T21:19:34.264Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/d0da72a76f2ea5adeb0f5639ceba3aa5ce0ffbef48a507b2143ee0e7e92203d2 200
+[debug] [2022-10-04T21:19:34.265Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/d0da72a76f2ea5adeb0f5639ceba3aa5ce0ffbef48a507b2143ee0e7e92203d2 [stream]
+[debug] [2022-10-04T21:19:34.267Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/55701b6f0c77bc148431d04893858988d5e0d0bf653db717ba015e541eff7663 200
+[debug] [2022-10-04T21:19:34.267Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/55701b6f0c77bc148431d04893858988d5e0d0bf653db717ba015e541eff7663 [stream]
+[debug] [2022-10-04T21:19:34.268Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/fbe5cbd44a99e6ce8d7783d9fc5de0b50044d1dc3a702a7fd309b7cd316009f8 200
+[debug] [2022-10-04T21:19:34.268Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/fbe5cbd44a99e6ce8d7783d9fc5de0b50044d1dc3a702a7fd309b7cd316009f8 [stream]
+[debug] [2022-10-04T21:19:34.269Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/65a60f31df31c31e8a707c76dbcb773840e439663c81c0af02e8728bb1376fac 200
+[debug] [2022-10-04T21:19:34.270Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/65a60f31df31c31e8a707c76dbcb773840e439663c81c0af02e8728bb1376fac [stream]
+[debug] [2022-10-04T21:19:34.341Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/deab19bea5ee2dace3a9c2c3dbc26ceac22931743b1742f760fcfe0a6d56b2a0 200
+[debug] [2022-10-04T21:19:34.342Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/deab19bea5ee2dace3a9c2c3dbc26ceac22931743b1742f760fcfe0a6d56b2a0 [stream]
+[debug] [2022-10-04T21:20:01.076Z] [uploadQueue] Retrying task 75befd70dd63ac8b1e243940bfe734a8efecf26316fa3bab55a46ce4e3de8ec4
+[debug] [2022-10-04T21:20:01.077Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/75befd70dd63ac8b1e243940bfe734a8efecf26316fa3bab55a46ce4e3de8ec4 [none]
+[debug] [2022-10-04T21:20:01.077Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/75befd70dd63ac8b1e243940bfe734a8efecf26316fa3bab55a46ce4e3de8ec4 [stream]
+[debug] [2022-10-04T21:20:31.877Z] [uploadQueue] Retrying task 75befd70dd63ac8b1e243940bfe734a8efecf26316fa3bab55a46ce4e3de8ec4
+[debug] [2022-10-04T21:20:31.878Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/75befd70dd63ac8b1e243940bfe734a8efecf26316fa3bab55a46ce4e3de8ec4 [none]
+[debug] [2022-10-04T21:20:31.879Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/75befd70dd63ac8b1e243940bfe734a8efecf26316fa3bab55a46ce4e3de8ec4 [stream]
+[debug] [2022-10-04T21:20:35.272Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/75befd70dd63ac8b1e243940bfe734a8efecf26316fa3bab55a46ce4e3de8ec4 200
+[debug] [2022-10-04T21:20:35.272Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/demoportal-2eb2a/versions/c5f624022b443930/files/75befd70dd63ac8b1e243940bfe734a8efecf26316fa3bab55a46ce4e3de8ec4 [stream]
+[debug] [2022-10-04T21:20:35.273Z] [hosting][upload queue][FINAL] {"max":3672,"min":2876,"avg":3476,"active":0,"complete":7,"success":7,"errored":0,"retried":2,"total":7,"elapsed":64604}
+[info] ✔  hosting[demoportal-2eb2a]: file upload complete 
+[debug] [2022-10-04T21:20:35.275Z] [hosting] deploy completed after 66864ms
+[debug] [2022-10-04T21:20:35.281Z] [
+  {
+    "config": {
+      "public": "dist/jobportal",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "demoportal-2eb2a"
+    },
+    "site": "demoportal-2eb2a",
+    "version": "projects/742358239926/sites/demoportal-2eb2a/versions/c5f624022b443930"
+  }
+]
+[info] i  hosting[demoportal-2eb2a]: finalizing version... 
+[debug] [2022-10-04T21:20:35.283Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/742358239926/sites/demoportal-2eb2a/versions/c5f624022b443930 updateMask=status%2Cconfig
+[debug] [2022-10-04T21:20:35.283Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/742358239926/sites/demoportal-2eb2a/versions/c5f624022b443930 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-10-04T21:23:40.075Z] ----------------------------------------------------------------------
+[debug] [2022-10-04T21:23:40.077Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2022-10-04T21:23:40.078Z] CLI Version:   11.9.0
+[debug] [2022-10-04T21:23:40.078Z] Platform:      linux
+[debug] [2022-10-04T21:23:40.078Z] Node Version:  v14.20.0
+[debug] [2022-10-04T21:23:40.078Z] Time:          Wed Oct 05 2022 02:53:40 GMT+0530 (India Standard Time)
+[debug] [2022-10-04T21:23:40.079Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-04T21:23:40.153Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-04T21:23:40.153Z] > authorizing via signed-in user (sshakerpbn@gmail.com)
+[debug] [2022-10-04T21:23:40.153Z] [iam] checking project demoportal-2eb2a for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-04T21:23:40.156Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/demoportal-2eb2a:testIamPermissions [none]
+[debug] [2022-10-04T21:23:40.156Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/demoportal-2eb2a:testIamPermissions x-goog-quota-user=projects/demoportal-2eb2a
+[debug] [2022-10-04T21:23:40.156Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/demoportal-2eb2a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-04T21:23:43.166Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/demoportal-2eb2a:testIamPermissions 200
+[debug] [2022-10-04T21:23:43.166Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/demoportal-2eb2a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-04T21:23:43.168Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/demoportal-2eb2a [none]
+[debug] [2022-10-04T21:23:43.953Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/demoportal-2eb2a 200
+[debug] [2022-10-04T21:23:43.953Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/demoportal-2eb2a {"projectId":"demoportal-2eb2a","projectNumber":"742358239926","displayName":"demoPortal","name":"projects/demoportal-2eb2a","resources":{"hostingSite":"demoportal-2eb2a"},"state":"ACTIVE","etag":"1_69f2294e-f6aa-4c0f-8c1a-a2b401422418"}
+[info] 
+[info] === Deploying to 'demoportal-2eb2a'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-10-04T21:23:43.957Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/demoportal-2eb2a [none]
+[debug] [2022-10-04T21:24:13.961Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/demoportal-2eb2a
