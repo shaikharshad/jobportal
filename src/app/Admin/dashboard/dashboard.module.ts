@@ -8,6 +8,8 @@ import { MaterialExampleModule } from '../../material/dashboard.module'
 import { DashboardMenuListComponent } from './dashboard-menu-list/dashboard-menu-list.component';
 import { PostlistComponent } from './postlist/postlist.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { AddPostComponent } from './add-post/add-post.component';
 
 
 @NgModule({
@@ -16,12 +18,15 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
     DashboardMenuListComponent,
     PostlistComponent,
     AdmindashboardComponent,
+    ToolbarComponent,
+    AddPostComponent,
     
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     MaterialModule,
+    MaterialExampleModule
 
   ]
 })

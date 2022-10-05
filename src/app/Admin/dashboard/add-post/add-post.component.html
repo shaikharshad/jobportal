@@ -1,0 +1,254 @@
+<mat-sidenav-container fullscreen>
+    <br>
+    <mat-sidenav #sidenav class="mat-drawer">
+        <app-dashboard-menu-list></app-dashboard-menu-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar class="primaryclass">
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <label class="lable">{{this.pageTitile}}</label>
+            <span class="toolbar-spacer"></span>
+            <app-toolbar></app-toolbar>
+        </mat-toolbar>
+        <div class="main-content">
+
+            <!--  {
+      "id" :1,
+      "-post_advertisment_no":'BA1234567',
+      "-post_name": 'THDCIL Recruitment 2022  THDCIL Recruitment 2022 THDCIL Recruitment 2022',
+      "-post_details":'THDC India Limited, is under the ownership of National Thermal Power Corporation Limited-THDCIL Recruitment 2022 (THDCIL Bharti 2022) for 109 Engineers Posts.THDC India Limited, is under the ownership of National Thermal Power Corporation Limited-THDCIL Recruitment 2022 (THDCIL Bharti 2022) for 109 Engineers Posts.THDC India Limited, is under the ownership of National Thermal Power Corporation Limited-THDCIL Recruitment 2022 (THDCIL Bharti 2022) for 109 Engineers Posts.',
+      "-post_short_details":'CG Indian Coast Guard, Indian Coast Gu',
+      "-post_publish_date": '02-02-2022',
+      "-post_closed_date": '02-07-2022',
+      "-post_closed_date_extended": '02-08-2022',
+      "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+      "==post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+      "-isActive":true,
+      "-isNew":true,
+      "-post_type":'THDCIL',
+      "-post_no_of_post":200,
+      "-post_age_req":25,
+      "-post_location":'parli',
+      "-post_fees":500,
+      "-post_obc_fees":500,
+      "-post_open_fees":300,
+      "-post_other_fees":100,
+      "-post_exam_date":'20-12-2023',
+      "-post_official_website":'www.google.com',
+      "-post_pdf_document":'' ,
+      "-post_department":"",
+      "post_category": [
+        {
+          "post_id":1,
+          "sub_post_category_id":1,
+          "sub_post_name":'CAPF मधील उपनिरीक्षक (GD)',
+          "sub_post_total_no":20,
+          "sub_post_education_req":"BCA,MCA"
+        },
+       
+      ]
+    }, -->
+            <div class="container">
+                <form [formGroup]="NewPostRegistration" (ngSubmit)="submit()" >
+                <mat-card class="example-card">
+                    <mat-card-title><label for="">New Post Add </label></mat-card-title>
+                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                    <mat-card-content>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                            </div>
+
+                        </div>
+                        <br>
+                        
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <mat-form-field>
+                                    <input type="text" formControlName="post_advertisment_no" matInput placeholder="Advertisment No">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <mat-form-field style="width:100% ;">
+                                    <input type="text" formControlName="post_name" matInput placeholder="Post Name">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-3">
+
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Post Department</mat-label>
+                                    <mat-select  formControlName="post_department">
+                                        <mat-option value="one">--</mat-option>
+                                        <mat-option value="one">Police</mat-option>
+                                        <mat-option value="two">Incomptax Department</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-3">
+
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Sub Departmen</mat-label>
+                                    <mat-select formControlName="post_type" >
+                                        <mat-option value="one">--</mat-option>
+                                        <mat-option value="one">First option</mat-option>
+                                        <mat-option value="two">Second option</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <mat-form-field style="width: 100%;" class="example-full-width" appearance="fill">
+                                    <mat-label>Post Short Details</mat-label>
+                                    <textarea matInput  formControlName="post_short_details"></textarea>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-6">
+                                <mat-form-field style="width: 100%;" class="example-full-width" appearance="fill">
+                                    <mat-label>Post Details</mat-label>
+                                    <textarea matInput  formControlName="post_details"></textarea>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <br>
+                       <div class="row">
+                         
+                            <div class="col-sm-3">
+                                <mat-form-field color="accent" appearance="fill">
+                                    <mat-label>Post Publish Date</mat-label>
+                                    <input matInput  formControlName="post_publish_date"  [matDatepicker]="picker1">
+                                    <mat-hint>MM/DD/YYYY</mat-hint>
+                                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker1 color="primary"></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-3">
+                                <mat-form-field color="accent" appearance="fill">
+                                    <mat-label>Post Closed Date</mat-label>
+                                    <input matInput formControlName="post_closed_date"  [matDatepicker]="picker2">
+                                    <mat-hint>MM/DD/YYYY</mat-hint>
+                                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker2 color="primary"></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-3">
+                                <mat-form-field color="accent" appearance="fill">
+                                    <mat-label>Post Closed Date Extended</mat-label>
+                                    <input matInput formControlName="post_closed_date_extended"  [matDatepicker]="picker3">
+                                    <mat-hint>MM/DD/YYYY</mat-hint>
+                                    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker3 color="primary"></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-3">
+                                <mat-form-field color="accent" appearance="fill">
+                                    <mat-label>Post Exame Date</mat-label>
+                                    <input matInput  formControlName="post_exam_date" [matDatepicker]="picker4">
+                                    <mat-hint>MM/DD/YYYY</mat-hint>
+                                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker4 color="primary"></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                        <!--  <br><br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <mat-form-field>
+                                    <input type="text" matInput placeholder="Total Post">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-3">
+                                <mat-form-field>
+                                    <input type="text" matInput placeholder="Post Age ">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-2">
+                                <mat-form-field>
+                                    <input type="text" matInput placeholder=" Open Fees ">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-2">
+                                <mat-form-field>
+                                    <input type="text" matInput placeholder="OBC Fees  ">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-2">
+                                <mat-form-field>
+                                    <input type="text" matInput placeholder="ST/CS Fees  ">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <mat-form-field>
+                                    <input type="text" matInput placeholder="Post Location/City ">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-3">
+                                <mat-form-field>
+                                    <input type="text" matInput placeholder="Post State">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-3">
+                                <mat-form-field>
+                                    <input type="text" matInput placeholder="Active">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-3">
+                                <mat-form-field>
+                                    <input type="text" matInput placeholder="New ">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <mat-form-field>
+                                    <input type="text" matInput placeholder="Post Pdf Document ">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-3">
+                                <mat-form-field>
+                                    <input type="text" matInput placeholder="Post Official Website ">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-3">
+                                <mat-form-field>
+                                    <input type="text" matInput placeholder="Post Logo">
+                                </mat-form-field>
+                            </div>
+                        </div> -->
+                        <br> <br>
+                        <div class="row">
+                            <div class="col-12">
+                                <pre>{{this.NewPostRegistration.value |json}}</pre>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-raised-button type="submit" color="primary">Save</button>&nbsp;
+                        <button mat-raised-button color="accent">Accent</button>
+                    </mat-card-actions>
+                </mat-card>
+            </form>
+
+            </div>
+
+
+
+
+
+        </div>
+    </mat-sidenav-content>
+
+
+</mat-sidenav-container>

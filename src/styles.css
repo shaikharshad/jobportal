@@ -10,3 +10,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   padding: 31px;
 
 }
+
+.primaryclass
+{
+  background-color: #1CB4FB !important;
+ 
+  
+}
+.primaryclass .mat-icon {
+  
+  color: white;
+}
+.primaryclass .lable{
+  color: white;
+}

@@ -31,6 +31,8 @@ const routes: Routes = [
 { path : 'results' ,component: ResultsComponent },
 { path: 'AdminLogin', loadChildren: () => import('./admin-login/admin-login.module').then(m => m.AdminLoginModule) },
 { path: 'Dashboard', loadChildren: () => import('./Admin/dashboard/dashboard.module').then(m => m.DashboardModule) },
+{ path: 'logout', loadChildren: () => import('./Admin/logout/logout.module').then(m => m.LogoutModule) },
+{ path: 'AllpostList', loadChildren: () => import('./Admin/allpost-list/allpost-list.module').then(m => m.AllpostListModule) },
 
 ];
 

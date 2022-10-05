@@ -1,16 +1,16 @@
-<mat-sidenav-container fullscreen>
+<mat-sidenav-container fullscreen >
   <br>
   <mat-sidenav #sidenav class="mat-drawer">
     <app-dashboard-menu-list></app-dashboard-menu-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar class="primaryclass">
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      My Application
+     <label class="lable">My Application </label> 
       <span class="toolbar-spacer"></span>
-      My Account
+      <app-toolbar></app-toolbar>
     </mat-toolbar>
     <div class="main-content">
       <app-admindashboard></app-admindashboard>

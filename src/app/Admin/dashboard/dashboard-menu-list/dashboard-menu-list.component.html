@@ -1,62 +1,60 @@
-<mat-card>
+
+<mat-card class="profileCard">
     <div class="container" style="text-align:center">
-      <div class="row">
-        <div class="col-12 col-sm-12"><img style="
+        <div class="row">
+            <div class="col-12 col-sm-12"><img style="
           height: 82px;
-      " class="rounded rounded-circle mx-auto d-block img-fluid"
-            src="{{this.getCurnUser[0].profile[0]?.Avatarphoto}}"
-            alt="..."></div>
-      </div><br>
-      <div class="row">
-        <div class="col-12 col-sm-12">
-          <p style="font-weight: bold;     font-size: 20px;"> {{this.getCurnUser[0].profile[0]?.fullName}}</p>
+      " class="rounded rounded-circle mx-auto d-block img-fluid" src="{{this.getCurnUser[0].profile[0]?.Avatarphoto}}"
+                    alt="..."></div>
+        </div><br>
+        <div class="row">
+            <div class="col-12 col-sm-12">
+                <p style="font-weight: bold;     font-size: 20px;"> {{this.getCurnUser[0].profile[0]?.fullName}}</p>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-sm-12">
-          <p style="font-size: 17px;">  {{this.getCurnUser[0].profile[0]?.emailId}}</p>
+        <div class="row">
+            <div class="col-12 col-sm-12">
+                <p style="font-size: 17px;" class="link-secondary"> {{this.getCurnUser[0].profile[0]?.emailId}}</p>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-sm-12">
-          <p> Login Type :  {{this.getCurnUser[0].profile[0]?.discription}}  </p>
+        <div class="row">
+            <div class="col-12 col-sm-12" class="link-secondary">
+                <p> Login Type : {{this.getCurnUser[0].profile[0]?.discription}} </p>
+            </div>
         </div>
-      </div>
     </div>
-  </mat-card>
+</mat-card>
 
-  <br>
-  <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <span class="link-secondary side-wall-new-update ">
-            <!-- {{ itemData?.post_name  | slice:0:35 }}...   -->
-            Post
-          </span>
+<br>
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let Pdata of  this.getCurnUser[0].menu" >
+        <mat-expansion-panel-header class="mat-expansion-panel-header">
+            <mat-panel-title>
+                <span class="link-secondary side-wall-new-update ">
+                    <!-- {{ itemData?.post_name  | slice:0:35 }}...   -->
+                    {{Pdata.parantMenuName}}
+                </span>
 
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <ul class="list-group list-group-flush" *ngFor="let data of  this.getCurnUser[0].menu" >
-        <li class="list-group-item list-group-item-action"  routerLink="/Dashboard/{{data.path}}" routerLinkActive="{{data.path}}" [queryParams]="{debug: true}" queryParamsHandling="merge">
-          <mat-icon style=" font-size: 19px;">library_books</mat-icon>{{data.name}}
-        </li>
-       <li class="list-group-item list-group-item-action" [routerLink]="['/Dashboard']">
-          <mat-icon style=" font-size: 19px;">library_books</mat-icon> Dashboard
-        </li>
-        <!--  <li class="list-group-item list-group-item-action">
-          <mat-icon style=" font-size: 19px;">library_books</mat-icon> Morbi leo risus
-        </li>
-        <li class="list-group-item list-group-item-action">
-          <mat-icon style=" font-size: 19px;">library_books</mat-icon> Porta ac
-        </li> -->
-        <li class="list-group-item list-group-item-action"  [routerLink]="['/'] ">
-          <mat-icon style=" font-size: 19px;">library_books</mat-icon> Logout 
-      </ul>
-      <!-- <p> <mat-icon>library_books</mat-icon>   New Post</p> -->
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <br>
+        <ul class="list-group list-group-flush ullistcolore" *ngFor="let data of  Pdata.parantMenu
+        ">
+            <li class="list-group-item list-group-item-action iconLable ullistcolore"
+                routerLink="/Dashboard/{{data.path}}" routerLinkActive="{{data.path}}" [queryParams]="{debug: true}"
+                queryParamsHandling="merge">
+                <mat-icon style=" font-size: 19px;">library_books</mat-icon>{{data.name}}
+            </li>
+        </ul>
+        <ul class="list-group list-group-flush ullistcolore">
+            <li class="list-group-item list-group-item-action iconLable" [routerLink]="['/Dashboard']">
+                <mat-icon style=" font-size: 19px;">library_books</mat-icon> Dashboard
+            </li>
+           
+        </ul>
     </mat-expansion-panel>
   
-  <!-- <p style="color: black;">
+    <!-- <p style="color: black;">
     
  {{
       this.getCurnUser[0].profile[0]
@@ -64,7 +62,28 @@
       | json
     }}
 </p>   -->
-  </mat-accordion>
- 
- 
-  <br>
+</mat-accordion>
+<br>
+<mat-accordion>
+    <mat-expansion-panel  >
+        <mat-expansion-panel-header class="mat-expansion-panel-header">
+            <mat-panel-title>
+                <span class="link-secondary side-wall-new-update ">
+                    <!-- {{ itemData?.post_name  | slice:0:35 }}...   -->
+                  logout
+                </span>
+
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <br>
+        <ul class="list-group list-group-flush ullistcolore">
+          
+            <li class="list-group-item list-group-item-action iconLable" [routerLink]="['/'] ">
+                <mat-icon style=" font-size: 19px;">library_books</mat-icon> Logout
+            </li>
+        </ul>
+        </mat-expansion-panel>
+    </mat-accordion>
+
+
+<br>

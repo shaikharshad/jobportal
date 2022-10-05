@@ -15,7 +15,70 @@ export class CommonServiceService {
     "password": "a",
     "LoginType":"superAdmin"
 
+  },
+  {
+    "id":2 ,
+    "username": "user",
+    "emailId":"user@gmail.com",
+    "password": "a",
+    "LoginType":"tester"
+
   }]
+
+  LoginData=[
+
+   {
+    
+      "id":1 ,
+     
+      "LoginType":"superAdmin",
+      "profile":[
+        {
+          "username": "arshad",
+          "emailId":"arshad@gmail.com",
+          "fullName": "Shaikh Arshad ",
+          "discription":"Lorem Ipsum is simply dummy text of the printing",
+          "Avatarphoto":"https://lh3.googleusercontent.com/-qLLhS_1nwgs/AAAAAAAAAAI/AAAAAAAAAAA/ACD5Jx6QQoqCvp49njs868IgeWfbL35_YA/photo.jpg?sz=46",
+
+        }
+      ],
+      
+      "menu": [
+        {
+          "parantMenuId":1,
+          "parantMenuName":"Post collection",
+          "parantMenu":
+            [
+              {
+                "menuId":1,
+                "path":"postlist",
+                "name":"Post List",
+                "isActive":true,
+                "iconclass":"",
+
+              },
+              {
+                "menuId":2,
+                "path":"postlist",
+                "name":"Post List",
+                "isActive":true,
+                "iconclass":"",
+
+              }
+            ]
+         }
+      ],
+      "loginRoleType":"Admin",
+      "isActive":true,
+
+      
+
+
+  
+    }
+   
+
+  ]
   main_wall_data =[
     {
       "id" :1,
