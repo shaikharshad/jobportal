@@ -162,3 +162,17 @@ and (-webkit-min-device-pixel-ratio: 2) {
 and (-webkit-min-device-pixel-ratio: 3) {
  
 }
+
+.closedSidenave{
+  display: flex;
+  justify-content: flex-end;
+  /* margin: -4px; */
+  margin-top: -9px;
+  margin-right: -11px;
+  /* z-index: 12; */
+  /* height: 41px; */
+
+}
+.closedSidenave mat-icon {
+  font-size: 17px;
+}

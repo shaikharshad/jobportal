@@ -1,7 +1,12 @@
 <mat-sidenav-container fullscreen >
   <br>
   <mat-sidenav #sidenav class="mat-drawer">
-    <app-dashboard-menu-list></app-dashboard-menu-list>
+    <div class="closedSidenave">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <app-dashboard-menu-list ></app-dashboard-menu-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="primaryclass">

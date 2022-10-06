@@ -48,5 +48,20 @@ mat-sidenav {
   }
   .buttonmargin{
     display: flex;
+    justify-content: flex-end;
     align-items: center;
   }
+  .buttonmargin button{
+    
+    background-color: #175893;
+  }
+  
+  .titleNane{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.mat-elevation-z8 {    
+    overflow-x: auto;
+   }
