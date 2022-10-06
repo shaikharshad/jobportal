@@ -1,24 +1,30 @@
 
-<mat-card class="profileCard">
+ <!-- <mat-sidenav #sidenav class="mat-drawer">
+    d
+  </mat-sidenav> -->
+ <button mat-icon-button   >
+    <mat-icon>menu</mat-icon>
+  </button>
+<mat-card class="profileCard" >
     <div class="container" style="text-align:center">
         <div class="row">
-            <div class="col-12 col-sm-12"><img style="
-          height: 82px;
-      " class="rounded rounded-circle mx-auto d-block img-fluid" src="{{this.getCurnUser[0].profile[0]?.Avatarphoto}}"
+            <div class="col-12 col-sm-12 "><img 
+        class="rounded profilePhoto rounded-circle mx-auto d-block img-fluid" src="{{this.getCurnUser[0].profile[0]?.Avatarphoto}}"
                     alt="..."></div>
         </div><br>
         <div class="row">
             <div class="col-12 col-sm-12">
-                <p style="font-weight: bold;     font-size: 20px;"> {{this.getCurnUser[0].profile[0]?.fullName}}</p>
+                <p class="profileName pl-0 pr-0"> {{this.getCurnUser[0].profile[0]?.fullName}}</p>
+                
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-sm-12">
-                <p style="font-size: 17px;" class="link-secondary"> {{this.getCurnUser[0].profile[0]?.emailId}}</p>
+                <p class="profileEmail pl-0 pr-0 link-secondary " > {{this.getCurnUser[0].profile[0]?.emailId}}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-sm-12" class="link-secondary">
+            <div class="col-12 col-sm-12 profileBio link-secondary">
                 <p> Login Type : {{this.getCurnUser[0].profile[0]?.discription}} </p>
             </div>
         </div>
@@ -27,7 +33,7 @@
 
 <br>
 <mat-accordion>
-    <mat-expansion-panel *ngFor="let Pdata of  this.getCurnUser[0].menu" >
+    <mat-expansion-panel class="mat-expansion-panel" *ngFor="let Pdata of  this.getCurnUser[0].menu" >
         <mat-expansion-panel-header class="mat-expansion-panel-header">
             <mat-panel-title>
                 <span class="link-secondary side-wall-new-update ">

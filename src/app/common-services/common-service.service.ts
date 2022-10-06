@@ -89,8 +89,8 @@ export class CommonServiceService {
       "post_publish_date": '02-02-2022',
       "post_closed_date": '02-07-2022',
       "post_closed_date_extended": '02-08-2022',
-      "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-      "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+      "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+      "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
       "isActive":true,
       "isNew":true,
       "post_type":'THDCIL',
@@ -201,8 +201,8 @@ export class CommonServiceService {
       "post_publish_date": '02-02-2022',
       "post_closed_date": '02-07-2022',
       "post_closed_date_extended": '02-08-2022',
-      "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-      "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+      "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+      "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
       "isActive":false,
       "post_type":'THDCIL',
       "post_no_of_post":200,
@@ -311,8 +311,8 @@ export class CommonServiceService {
       "post_publish_date": '02-02-2022',
       "post_closed_date": '02-07-2022',
       "post_closed_date_extended": '02-08-2022',
-      "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-      "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+      "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+      "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
       "isActive":false,
       "post_type":'THDCIL',
       "post_no_of_post":200,
@@ -421,8 +421,8 @@ export class CommonServiceService {
       "post_publish_date": '02-02-2022',
       "post_closed_date": '02-07-2022',
       "post_closed_date_extended": '02-08-2022',
-      "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-      "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+      "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+      "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
       "isActive":true,
       "post_type":'THDCIL',
       "post_no_of_post":200,
@@ -531,8 +531,8 @@ export class CommonServiceService {
       "post_publish_date": '02-02-2022',
       "post_closed_date": '02-07-2022',
       "post_closed_date_extended": '02-08-2022',
-      "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-      "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+      "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+      "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
       "isActive":true,
       "post_type":'THDCIL',
       "post_no_of_post":200,
@@ -641,8 +641,8 @@ export class CommonServiceService {
       "post_publish_date": '02-02-2022',
       "post_closed_date": '02-07-2022',
       "post_closed_date_extended": '02-08-2022',
-      "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-      "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+      "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+      "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
       "isActive":true,
       "post_type":'THDCIL',
       "post_no_of_post":200,
@@ -751,8 +751,8 @@ export class CommonServiceService {
       "post_publish_date": '02-02-2022',
       "post_closed_date": '02-07-2022',
       "post_closed_date_extended": '02-08-2022',
-      "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-      "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+      "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+      "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
       "isActive":true,
       "post_type":'THDCIL',
       "post_no_of_post":200,
@@ -871,7 +871,7 @@ export class CommonServiceService {
     "post_fees":500,
     "post_exam_date":'16-08-2022',
     "post_official_website":'www.google.com',
-    "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+    "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
 
     },
     {
@@ -887,7 +887,7 @@ export class CommonServiceService {
     "post_fees":500,
     "post_exam_date":'20-12-2023',
     "post_official_website":'www.google.com',
-    "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+    "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
 
     },
     {
@@ -904,7 +904,7 @@ export class CommonServiceService {
     "post_fees":500,
     "post_exam_date":'20-12-2023',
     "post_official_website":'www.google.com',
-    "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+    "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
 
     },
     {
@@ -920,7 +920,7 @@ export class CommonServiceService {
     "post_fees":500,
     "post_exam_date":'20-12-2023',
     "post_official_website":'www.google.com',
-    "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+    "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
 
     },
     {
@@ -937,7 +937,7 @@ export class CommonServiceService {
     "post_fees":500,
     "post_exam_date":'20-12-2023',
     "post_official_website":'www.google.com',
-    "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+    "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
 
     },
   ]
@@ -1051,8 +1051,8 @@ export class CommonServiceService {
        "hallticketsDownloadLinks": "",
        "IshallticketsDownloadLinks": true,
        "anserKeypdfLink": "",
-       "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-       "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+       "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+       "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
        
     },
     {
@@ -1073,8 +1073,8 @@ export class CommonServiceService {
        "hallticketsDownloadLinks": "",
        "IshallticketsDownloadLinks": true,
        "anserKeypdfLink": "",
-       "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-       "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+       "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+       "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
        
     },
     {
@@ -1095,8 +1095,8 @@ export class CommonServiceService {
        "hallticketsDownloadLinks": "",
        "IshallticketsDownloadLinks": true,
        "anserKeypdfLink": "",
-       "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-       "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+       "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+       "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
        
     },
     {
@@ -1117,8 +1117,8 @@ export class CommonServiceService {
        "hallticketsDownloadLinks": "",
        "IshallticketsDownloadLinks": true,
        "anserKeypdfLink": "",
-       "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-       "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+       "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+       "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
        
     },
     {
@@ -1139,8 +1139,8 @@ export class CommonServiceService {
        "hallticketsDownloadLinks": "",
        "IshallticketsDownloadLinks": true,
        "anserKeypdfLink": "",
-       "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-       "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+       "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+       "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
        
     },
     {
@@ -1161,8 +1161,8 @@ export class CommonServiceService {
        "hallticketsDownloadLinks": "",
        "IshallticketsDownloadLinks": true,
        "anserKeypdfLink": "",
-       "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-       "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+       "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+       "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
        
     },
     {
@@ -1183,8 +1183,8 @@ export class CommonServiceService {
        "hallticketsDownloadLinks": "",
        "IshallticketsDownloadLinks": true,
        "anserKeypdfLink": "",
-       "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-       "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+       "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+       "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
        
     },
     {
@@ -1205,8 +1205,8 @@ export class CommonServiceService {
        "hallticketsDownloadLinks": "",
        "IshallticketsDownloadLinks": true,
        "anserKeypdfLink": "",
-       "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-       "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+       "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+       "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
        
     },
     {
@@ -1227,8 +1227,8 @@ export class CommonServiceService {
        "hallticketsDownloadLinks": "",
        "IshallticketsDownloadLinks": true,
        "anserKeypdfLink": "",
-       "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-       "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+       "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+       "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
        
     },
     {
@@ -1249,8 +1249,8 @@ export class CommonServiceService {
        "hallticketsDownloadLinks": "",
        "IshallticketsDownloadLinks": true,
        "anserKeypdfLink": "",
-       "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-       "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+       "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+       "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
        
     },
     {
@@ -1271,8 +1271,8 @@ export class CommonServiceService {
        "hallticketsDownloadLinks": "",
        "IshallticketsDownloadLinks": true,
        "anserKeypdfLink": "",
-       "post_image":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
-       "post_loga":'https://www.thdc.co.in/sites/all/themes/thdc//images/logo-m.png',
+       "post_image":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
+       "post_loga":'https://i0.wp.com/majhinaukri.in/wp-content/uploads/2017/12/Maharashtra-Job-Fair.png?resize=47%2C47&ssl=1',
        
     },
     

@@ -8,7 +8,7 @@
             <button mat-icon-button (click)="sidenav.toggle()">
                 <mat-icon>menu</mat-icon>
             </button>
-            <label class="lable">{{this.pageTitile}}</label>
+            <label class="lable ">{{this.pageTitile}}</label>
             <span class="toolbar-spacer"></span>
             <app-toolbar></app-toolbar>
         </mat-toolbar>
@@ -53,8 +53,16 @@
             <div class="container">
                 <form [formGroup]="NewPostRegistration" (ngSubmit)="submit()" >
                 <mat-card class="example-card">
-                    <mat-card-title><label for="">New Post Add </label></mat-card-title>
-                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                    <mat-card-title>
+                        
+                        <!-- <mat-icon>arrow_back</mat-icon> -->
+
+                        <label class="titleNane" for=""> 
+                            <button  mat-icon-button routerLink="/Dashboard/postlist">
+                                <mat-icon >keyboard_arrow_left</mat-icon>
+                            </button>  &nbsp;
+                            Add Post </label></mat-card-title>
+                    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
                     <mat-card-content>
 
                         <br>
@@ -69,6 +77,7 @@
                             <div class="col-sm-3">
                                 <mat-form-field>
                                     <input type="text" formControlName="post_advertisment_no" matInput placeholder="Advertisment No">
+                                    <mat-error *ngIf="checkError('post_advertisment_no', 'required')">Advertisment No is required</mat-error>
                                 </mat-form-field>
                             </div>
                         </div>
@@ -77,6 +86,8 @@
                             <div class="col-sm-6">
                                 <mat-form-field style="width:100% ;">
                                     <input type="text" formControlName="post_name" matInput placeholder="Post Name">
+                                    <mat-error *ngIf="checkError('post_name', 'required')">post nameis required</mat-error>
+
                                 </mat-form-field>
                             </div>
                             <div class="col-sm-3">
@@ -91,7 +102,6 @@
                                 </mat-form-field>
                             </div>
                             <div class="col-sm-3">
-
                                 <mat-form-field appearance="fill">
                                     <mat-label>Sub Departmen</mat-label>
                                     <mat-select formControlName="post_type" >
@@ -108,12 +118,16 @@
                                 <mat-form-field style="width: 100%;" class="example-full-width" appearance="fill">
                                     <mat-label>Post Short Details</mat-label>
                                     <textarea matInput  formControlName="post_short_details"></textarea>
+                                    <mat-error *ngIf="checkError('post_short_details', 'required')">Post Short Details required</mat-error>
+
                                 </mat-form-field>
                             </div>
                             <div class="col-sm-6">
                                 <mat-form-field style="width: 100%;" class="example-full-width" appearance="fill">
                                     <mat-label>Post Details</mat-label>
                                     <textarea matInput  formControlName="post_details"></textarea>
+                                    <mat-error *ngIf="checkError('post_details', 'required')">Post Details required</mat-error>
+
                                 </mat-form-field>
                             </div>
                         </div>
@@ -152,93 +166,109 @@
                                     <mat-label>Post Exame Date</mat-label>
                                     <input matInput  formControlName="post_exam_date" [matDatepicker]="picker4">
                                     <mat-hint>MM/DD/YYYY</mat-hint>
-                                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                    <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
                                     <mat-datepicker #picker4 color="primary"></mat-datepicker>
                                 </mat-form-field>
                             </div>
 
                         </div>
-                        <!--  <br><br>
+                       <br><br>
                         <div class="row">
                             <div class="col-sm-3">
                                 <mat-form-field>
-                                    <input type="text" matInput placeholder="Total Post">
+                                    <input type="text"  formControlName="post_no_of_post"  matInput placeholder="Total Post">
                                 </mat-form-field>
                             </div>
                             <div class="col-sm-3">
                                 <mat-form-field>
-                                    <input type="text" matInput placeholder="Post Age ">
+                                    <input type="text" formControlName="post_age_req" matInput placeholder="Post Age ">
                                 </mat-form-field>
                             </div>
                             <div class="col-sm-2">
                                 <mat-form-field>
-                                    <input type="text" matInput placeholder=" Open Fees ">
+                                    <input type="text"  formControlName="post_open_fees"matInput placeholder=" Open Fees ">
                                 </mat-form-field>
                             </div>
                             <div class="col-sm-2">
                                 <mat-form-field>
-                                    <input type="text" matInput placeholder="OBC Fees  ">
+                                    <input type="text" formControlName="post_obc_fees" matInput placeholder="OBC Fees  ">
                                 </mat-form-field>
                             </div>
                             <div class="col-sm-2">
                                 <mat-form-field>
-                                    <input type="text" matInput placeholder="ST/CS Fees  ">
+                                    <input type="text" formControlName="post_other_fees" matInput placeholder="ST/CS Fees  ">
                                 </mat-form-field>
                             </div>
                         </div>
                         <br>
-                        <div class="row">
+                         <div class="row">
                             <div class="col-sm-3">
-                                <mat-form-field>
-                                    <input type="text" matInput placeholder="Post Location/City ">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Post Location/City</mat-label>
+                                    <mat-select formControlName="post_location" >
+                                        <mat-option value="one">--</mat-option>
+                                        <mat-option value="one">First option</mat-option>
+                                        <mat-option value="two">Second option</mat-option>
+                                    </mat-select>
                                 </mat-form-field>
                             </div>
                             <div class="col-sm-3">
-                                <mat-form-field>
-                                    <input type="text" matInput placeholder="Post State">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Post State </mat-label>
+                                    <mat-select >
+                                        <mat-option value="one">--</mat-option>
+                                        <mat-option value="one">First option</mat-option>
+                                        <mat-option value="two">Second option</mat-option>
+                                    </mat-select>
                                 </mat-form-field>
                             </div>
-                            <div class="col-sm-3">
-                                <mat-form-field>
-                                    <input type="text" matInput placeholder="Active">
-                                </mat-form-field>
+                            <div class="col-sm-3 ActiveInput">
+                                <mat-slide-toggle formControlName="isActive">Active</mat-slide-toggle>
+
                             </div>
-                            <div class="col-sm-3">
-                                <mat-form-field>
-                                    <input type="text" matInput placeholder="New ">
-                                </mat-form-field>
+                            <div class="col-sm-3 ActiveInput">
+                                <mat-slide-toggle formControlName="isNew">New</mat-slide-toggle>
+
                             </div>
                         </div>
                         <br>
-                        <div class="row">
+                       <div class="row">
                             <div class="col-sm-3">
                                 <mat-form-field>
-                                    <input type="text" matInput placeholder="Post Pdf Document ">
+                                    <input type="text"  formControlName="post_pdf_document" matInput placeholder="Post Pdf Document ">
                                 </mat-form-field>
                             </div>
                             <div class="col-sm-3">
                                 <mat-form-field>
-                                    <input type="text" matInput placeholder="Post Official Website ">
+                                    <input type="text" formControlName="post_official_website" matInput placeholder="Post Official Website ">
                                 </mat-form-field>
                             </div>
-                            <div class="col-sm-3">
+                            <!-- <div class="col-sm-3">
                                 <mat-form-field>
                                     <input type="text" matInput placeholder="Post Logo">
                                 </mat-form-field>
-                            </div>
-                        </div> -->
-                        <br> <br>
-                        <div class="row">
-                            <div class="col-12">
-                                <pre>{{this.NewPostRegistration.value |json}}</pre>
-                            </div>
-                        </div>
+                            </div> -->
+                        </div> 
+                     
                     </mat-card-content>
                     <mat-card-actions>
                         <button mat-raised-button type="submit" color="primary">Save</button>&nbsp;
-                        <button mat-raised-button color="accent">Accent</button>
+                        <button mat-raised-button type="clear" color="accent">Cancel</button>
                     </mat-card-actions>
+                    <br> <br>
+                    <div class="row">
+                        <div class="col-6">
+                            <P>Befor Submit</P>
+                            <pre>{{this.NewPostRegistration.value |json}}</pre>
+                        </div>
+                   
+                        <div class="col-6">
+                            <P>After Submit</P>
+                            <pre>{{this.NewPostRegistration.value |json}}</pre>
+                        </div>
+                    </div>
                 </mat-card>
+                
             </form>
 
             </div>
