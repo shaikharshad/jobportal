@@ -132,6 +132,46 @@ mat-sidenav {
 /* .mat-expansion-panel{
   height: 34px;
 } */
+
+/* post list  */
+.ActionEye{
+  width: 91px;
+  display: flex;
+  /* flex-wrap: nowrap; */
+  align-items: stretch;
+  font-size: 21px;
+  justify-content: center !important;
+ }
+ .ActionEye  .eye{
+  color: #2a4695;
+  font-size: 16px;
+ }
+ .ActionEye  .edit{
+  color: #207a24;
+  font-size: 16px;
+ }
+ 
+ .publishD{
+  width: 113px
+ }
+ .postdataTd .NamePost{
+
+  width: 20px !important;
+  color: red;
+
+ }
+ .postlistHRow{
+  text-align: center;
+  font-size: 9px !important;
+ }
+ .postdataTd{
+  font-size: 9px;
+  white-space: nowrap;
+}
+.logoPhoto{
+  width: 63px !important;
+ }
+
 }
  
 /* For Mobile Landscape View */

@@ -65,3 +65,33 @@ mat-sidenav {
 .mat-elevation-z8 {    
     overflow-x: auto;
    }
+
+   .ActionEye{
+    width: 91px;
+    display: flex;
+    /* flex-wrap: nowrap; */
+    justify-content: space-between;
+    align-items: stretch;
+    font-size: 21px;
+   }
+   .ActionEye  .eye{
+    color: #2a4695;
+   }
+   .ActionEye  .edit{
+    color: #207a24
+   }
+   
+   .publishD{
+    width: 113px
+   }
+   .NamePost{
+    /* width: 491px ; */
+   }
+   .postlistHRow{
+    text-align: center;
+    font-size: 12px;
+   }
+   .logoPhoto{
+    width: 63px;
+   }
+   

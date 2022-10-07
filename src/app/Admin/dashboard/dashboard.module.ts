@@ -6,7 +6,7 @@ import { DashboardComponent } from './dashboard.component';
 import { MaterialModule } from '../../material/material.module'
 import { MaterialExampleModule } from '../../material/dashboard.module'
 import { DashboardMenuListComponent } from './dashboard-menu-list/dashboard-menu-list.component';
-import { PostlistComponent } from './postlist/postlist.component';
+import { DialogContentExampleDialog, PostlistComponent } from './postlist/postlist.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AddPostComponent } from './add-post/add-post.component';
@@ -20,12 +20,14 @@ import { AddPostComponent } from './add-post/add-post.component';
     AdmindashboardComponent,
     ToolbarComponent,
     AddPostComponent,
+    DialogContentExampleDialog
     
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     MaterialModule,
+    MaterialExampleModule,
     MaterialExampleModule
 
   ]
