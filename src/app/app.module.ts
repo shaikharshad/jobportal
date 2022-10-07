@@ -19,6 +19,7 @@ import { HallticketsComponent } from './collection/halltickets/halltickets.compo
 import { ExamesComponent } from './collection/exames/exames.component';
 import { ResultsComponent } from './collection/results/results.component';
 import { AuthGuard } from './auth.guard';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { AuthGuard } from './auth.guard';
     MegabhartiComponent,
     HallticketsComponent,
     ExamesComponent,
-    ResultsComponent,    
+    ResultsComponent, 
   ],
   imports: [
     BrowserModule,
@@ -41,9 +42,17 @@ import { AuthGuard } from './auth.guard';
     BrowserAnimationsModule,
     MaterialModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot({
+      timeOut: 1000,
+      positionClass: 'toast-top-right',
+      // enableHtml: true,
+      closeButton: true
+
+      
+    }),
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

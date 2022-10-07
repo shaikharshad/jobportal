@@ -8,6 +8,10 @@ import { Router } from '@angular/router';
 import { DatapassServiceService } from 'src/app/datapass-service/datapass-service.service';
 import { ThisReceiver } from '@angular/compiler';
 import { LoginServiceService } from '../login-service.service';
+import { ToastrService } from 'ngx-toastr';
+
+
+
 @Component({
   selector: 'app-admin-login',
   templateUrl: './admin-login.component.html',
@@ -19,7 +23,8 @@ export class AdminLoginComponent implements OnInit {
   constructor(
     private _commonServices:CommonServiceService ,
     private _LoginServices:LoginServiceService ,
-    private Router :Router
+    private Router :Router,
+    private toastr: ToastrService
 
   ) { }
   error:boolean=false;
@@ -49,11 +54,13 @@ export class AdminLoginComponent implements OnInit {
       console.log("do it");
       this.Router.navigateByUrl('/Dashboard');  
       this.getMainWallData()
-
+      this.toastr.success(this.Login.value.username, 'Login Success' );
     }
     else
     {
       console.log("dont do it");
+      this.toastr.error('Something Wrong' );
+
       
     }
     // if( this.Login.value.username ==  abc[0].username  && 
@@ -73,6 +80,7 @@ export class AdminLoginComponent implements OnInit {
 
   
   ngOnInit(): void {
+
   }
 
 }
