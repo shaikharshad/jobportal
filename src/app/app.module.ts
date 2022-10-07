@@ -18,6 +18,7 @@ import { MegabhartiComponent } from './collection/megabharti/megabharti.componen
 import { HallticketsComponent } from './collection/halltickets/halltickets.component';
 import { ExamesComponent } from './collection/exames/exames.component';
 import { ResultsComponent } from './collection/results/results.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { ResultsComponent } from './collection/results/results.component';
     NgbModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

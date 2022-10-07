@@ -16,15 +16,15 @@ export class AdmindashboardComponent implements OnInit {
   searchcard:boolean=false
   panelOpenState:boolean = false;
 
-  getMainWallData(){
-      this.userLoginData= this._commonServices.LoginData
-      console.log(this.userLoginData,"this.userLoginData");
-      localStorage.setItem('currentUser', JSON.stringify(this.userLoginData));
+  // getMainWallData(){
+  //     this.userLoginData= this._commonServices.LoginData
+  //     console.log(this.userLoginData,"this.userLoginData");
+  //     localStorage.setItem('currentUser', JSON.stringify(this.userLoginData));
 
-  }
+  // }
   ngOnInit(): void {
 
-    this.getMainWallData()
+    // this.getMainWallData()
   }
 
 }

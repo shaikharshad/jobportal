@@ -3,7 +3,7 @@
 <mat-card class="profileCard" >
     <div class="container" style="text-align:center">
         <div class="row">
-            <div class="col-12 col-sm-12 "><img 
+            <div class="col-12 col-sm-12 "><img  *ngIf="this.getCurnUser[0].profile[0]?.Avatarphoto"
         class="rounded profilePhoto rounded-circle mx-auto d-block img-fluid" src="{{this.getCurnUser[0].profile[0]?.Avatarphoto}}"
                     alt="..."></div>
         </div><br>

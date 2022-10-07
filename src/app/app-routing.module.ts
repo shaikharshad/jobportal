@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 import { AdminloginComponent } from './collection/adminlogin/adminlogin.component';
 import { ExamesComponent } from './collection/exames/exames.component';
 import { FooterComponent } from './collection/footer/footer.component';
@@ -30,7 +31,7 @@ const routes: Routes = [
 { path : 'exames' ,component: ExamesComponent },
 { path : 'results' ,component: ResultsComponent },
 { path: 'AdminLogin', loadChildren: () => import('./admin-login/admin-login.module').then(m => m.AdminLoginModule) },
-{ path: 'Dashboard', loadChildren: () => import('./Admin/dashboard/dashboard.module').then(m => m.DashboardModule) },
+{ path: 'Dashboard', loadChildren: () => import('./Admin/dashboard/dashboard.module').then(m => m.DashboardModule), canActivate:[AuthGuard] },
 { path: 'logout', loadChildren: () => import('./Admin/logout/logout.module').then(m => m.LogoutModule) },
 { path: 'AllpostList', loadChildren: () => import('./Admin/allpost-list/allpost-list.module').then(m => m.AllpostListModule) },
 

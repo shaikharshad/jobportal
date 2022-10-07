@@ -38,7 +38,7 @@ export class CommonServiceService {
           "emailId":"arshad@gmail.com",
           "fullName": "Shaikh Arshad ",
           "discription":"Lorem Ipsum is simply dummy text of the printing",
-          "Avatarphoto":"https://lh3.googleusercontent.com/-qLLhS_1nwgs/AAAAAAAAAAI/AAAAAAAAAAA/ACD5Jx6QQoqCvp49njs868IgeWfbL35_YA/photo.jpg?sz=46",
+          "Avatarphoto":"https://lh3.googleusercontent.com/-qLLhS_1nwgs/AAAAAAAAAAI/AAAAAAAAAAA/ACD5Jx6QQoqCvp49njs868IgeWfbL35_YA/s128-c/photo.jpg",
 
         }
       ],
