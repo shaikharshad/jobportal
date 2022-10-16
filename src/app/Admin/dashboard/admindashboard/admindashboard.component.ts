@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonServiceService } from 'src/app/common-services/common-service.service';
 import { ChartOptions } from 'chart.js';
+import { ChartConfiguration } from 'chart.js';
 
 @Component({
   selector: 'app-admindashboard',
@@ -18,6 +19,7 @@ public pieChartDatasets = [ {
 } ];
 public pieChartLegend = true;
 public pieChartPlugins = [];
+// 
 
   constructor(
     private _commonServices:CommonServiceService ,
