@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonServiceService } from 'src/app/common-services/common-service.service';
+import { ChartOptions } from 'chart.js';
 
 @Component({
   selector: 'app-admindashboard',
@@ -7,9 +8,20 @@ import { CommonServiceService } from 'src/app/common-services/common-service.ser
   styleUrls: ['./admindashboard.component.css']
 })
 export class AdmindashboardComponent implements OnInit {
+// Pie
+public pieChartOptions: ChartOptions<'pie'> = {
+  responsive: false,
+};
+public pieChartLabels = [ [ 'Download', 'Sales' ], [ 'In', 'Store', 'Sales' ], 'Mail Sales' ];
+public pieChartDatasets = [ {
+  data: [ 300, 500, 100 ]
+} ];
+public pieChartLegend = true;
+public pieChartPlugins = [];
 
   constructor(
     private _commonServices:CommonServiceService ,
+    
 
   ) { }
   userLoginData:any

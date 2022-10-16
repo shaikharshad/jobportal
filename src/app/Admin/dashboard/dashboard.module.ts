@@ -10,6 +10,7 @@ import { DialogContentExampleDialog, PostlistComponent } from './postlist/postli
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AddPostComponent } from './add-post/add-post.component';
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AddPostComponent } from './add-post/add-post.component';
     DashboardRoutingModule,
     MaterialModule,
     MaterialExampleModule,
-    MaterialExampleModule
+    MaterialExampleModule,
+    NgChartsModule
 
   ]
 })

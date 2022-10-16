@@ -5,10 +5,10 @@ mat-sidenav {
     width: 280px;
     padding:15px;
 }
-.mat-drawer { 
+/* .mat-drawer { 
     background-color: rgb(216 239 243);
    
-}
+} */
 .main-content {
     padding:20px;
 }
@@ -23,10 +23,10 @@ mat-sidenav {
     width: 280px;
     padding:15px;
 }
-.mat-drawer { 
+/* .mat-drawer { 
     background-color: #e3f2fd
   
-}
+} */
 .main-content {
     padding:20px;
 }

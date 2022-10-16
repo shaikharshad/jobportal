@@ -1,1 +1,25 @@
-<p>admindashboard works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+     <mat-card>
+      <canvas baseChart
+        [type]="'pie'"
+        [datasets]="pieChartDatasets"
+        [labels]="pieChartLabels"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins"
+        [legend]="pieChartLegend">
+      </canvas>
+    </mat-card>
+        <br>
+    </div>
+    <div class="col-sm">
+     <mat-card>Simple card</mat-card>
+<br>
+    </div>
+    <div class="col-sm">
+     <mat-card>Simple card</mat-card>
+<br>
+    </div>
+  </div>
+</div>

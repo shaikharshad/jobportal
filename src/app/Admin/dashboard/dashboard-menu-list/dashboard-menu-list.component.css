@@ -7,7 +7,9 @@ mat-sidenav {
 }
 .mat-drawer { 
     background-color: #023075;
-    color:#fff
+    color:#fff;
+    border-bottom-left-radius: 45px;
+
 }
 .main-content {
     padding:20px;
@@ -48,15 +50,11 @@ mat-sidenav {
     display: flex;
     justify-content: flex-start;
   }
-  /* .profileCard{
-  
-    width: 230px !important;
-    padding: 13px;
-    margin-left: 9px;
-    margin-top: 14px;
-    border-radius: 19px;
+  .profileCard{
+    border-bottom-left-radius: 54px;
+    background-color: #efefefad;
 
-  } */
+  }
   .mat-expansion-panel-header{
     background-color: #19B5FE !important;
   }

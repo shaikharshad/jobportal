@@ -20,6 +20,7 @@ import { ExamesComponent } from './collection/exames/exames.component';
 import { ResultsComponent } from './collection/results/results.component';
 import { AuthGuard } from './auth.guard';
 import { ToastrModule } from 'ngx-toastr';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,8 @@ import { ToastrModule } from 'ngx-toastr';
     MaterialModule,
     NgbModule,
     HttpClientModule,
+    
+    NgChartsModule,
     ToastrModule.forRoot({
       timeOut: 1000,
       positionClass: 'toast-top-right',
@@ -51,6 +54,7 @@ import { ToastrModule } from 'ngx-toastr';
 
       
     }),
+    
   ],
   providers: [AuthGuard, ],
   bootstrap: [AppComponent]

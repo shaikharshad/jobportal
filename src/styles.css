@@ -3,6 +3,19 @@
 html, body { height: 100%; background-color: #f7f9f7; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+.mat-drawer{
+  background-color: #f9fbe7;
+}
+.main-content {
+
+background-color: rgb(0 0 0 / 4%) !important
+}
+.mat-drawer-inner-container{
+  width: 100%;
+    height: 100%;
+    overflow: hidden !important
+
+}
 .wal-colmn-side
 {
   margin-top: 16px;
@@ -17,6 +30,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
  
   
 }
+/* .profileCard{
+  border-bottom-left-radius: 54px;
+
+} */
 .primaryclass .mat-icon {
   
   color: white;
@@ -35,20 +52,28 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* Globar css */
 .profilePhoto{
   height: 66px;
+  margin-top: 16px;
+}
+.profileCard .container {
+  /* background-color: #fafafa; */
+  text-align: center;
+  background-color: #1CB4FB;
+    border-bottom-left-radius: 51px;
 }
 .profileName{
   font-weight: bold;
-  font-size: 15px;
+  font-size: 15px; 
+  color: white;
 }
 .profileEmail{
   font-size: 14px;
   margin: -10px 0 12px !important ;
-
+    color: white;
 }
 .profileBio{
   font-size: 11px;
   margin: -10px 0 12px !important ;
-
+    color: white;
 }
 
 /* Mobile suported device */
@@ -103,25 +128,35 @@ mat-sidenav {
 /* Globar css */
 .profileCard{
   padding: 3px !important;
+  border-bottom-left-radius: 54px !important;
+  background-color: #efefefad;
+   
 }
+/* .profileCard{
+  border-bottom-left-radius: 54px;
+  background-color: #efefefad;
+
+} */
 .profilePhoto{
   height: 70px;
+  margin-top: 16px;
   
 }
 .profileName{
   font-weight: bold;
   font-size: 13px;
   margin: -9px 0 12px !important ;
+  color: white;
 }
 .profileEmail{
   font-size: 12px;
   margin: -18px 0 12px !important ;
-
+  color: white;
 }
 .profileBio{
   font-size: 10px;
   margin: -13px 0 12px !important ;
-
+  color: white;
   line-height: 13px;
 
 }
