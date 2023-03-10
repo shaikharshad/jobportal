@@ -1,8 +1,4 @@
- :host {
-        display: flex;
-        justify-content: center;
-        margin: 100px 0px;
-      }
+ 
 
       .mat-form-field {
         width: 100%;
@@ -27,3 +23,15 @@
         justify-content: flex-end;
       }
     
+.jp-adminlogin{
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+/* .jp-adminlogin .jp-left-image{
+  background-image: url('../../assets/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+} */
