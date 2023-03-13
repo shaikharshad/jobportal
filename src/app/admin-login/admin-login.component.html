@@ -1,28 +1,69 @@
 <!-- <div  >Your Form With Error Message</div> -->
-<mat-card>
-    <mat-card-title>Login</mat-card-title>
-<mat-card-content>
-<form [formGroup]="Login" (ngSubmit)="submit()" >
-  <p>
-    <mat-form-field>
-      <input type="text" matInput placeholder="Username" formControlName="username">
-    </mat-form-field>
-  </p>
 
-  <p>
-    <mat-form-field>
-      <input type="password" matInput placeholder="Password" formControlName="password">
-    </mat-form-field>
-  </p>
+<div class="container-flude" style="border: 1px dotted;
+border-radius: 24px;
+border-color: #bfbfbf;
+">
+  <div class="row">
+    <div class="col-md">
+      <div style="    width: 100%;
+      max-width: 20rem; 
+  ">
+      <img style="
+        max-width: 109%;
+      max-height: 100%;  
+    " src="../../assets/logo.png">
+  
+    </div>
+    </div>
+    <div class="col-md" style="    display: flex;
+    align-items: center;
+    justify-content: flex-start;">
+          <mat-card style="    height: 23rem;
+          width: 30rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; border-radius: 15px;" >
+            <mat-card-title>Login</mat-card-title> 
+            <br>
+            <br>
+            <mat-card-content>
+              <form [formGroup]="Login" (ngSubmit)="submit()">
+                <p>
+                  <mat-form-field>
+                    <input type="text" matInput placeholder="Username" formControlName="username">
+                  </mat-form-field>
+                </p>
+      
+                <p>
+                  <mat-form-field>
+                    <input type="password" matInput placeholder="Password" formControlName="password">
+                  </mat-form-field>
+                </p>
+      
+                <p *ngIf="error" class="error">
+                  {{ "error" }}
+                </p>
+                
+                <div style="display: flex;
+                justify-content: space-between;
+            ">
+                  <div class="button">
+                    <button type="submit" mat-button>Forgote password ?</button>
+                  </div>
 
-  <p *ngIf="error" class="error">
-    {{ "error" }}
-  </p>
+                  <div class="button">
+                    <button type="submit" mat-button>Login</button>
+                  </div>
+                </div>
+              
+      
+              </form>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    
 
-  <div class="button">
-    <button type="submit" mat-button>Login</button>
-  </div>
-
-</form>
-</mat-card-content>
-</mat-card>
+</div>
